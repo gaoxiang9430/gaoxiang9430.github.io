@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://gaoxiang9430.github.io/stylesheets/shiori.css">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gaoxiang9430.github.io/res/favicon.ico">
+    <title>Xiang</title>
+    <style> 
+		.divcss5{text-align:center} 
+		.navbar{
+    		background:rgba(0,0,0,0);
+		}
+	</style> 
+    
+    
+
+  </head>
+  <body>
+    <div style="background-image:url(https://gaoxiang9430.github.io/res/background.jpg);width:background-size:100% auto;height:280px;background-repeat:repeat;">
+		<div class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+		    <div>
+		        <div class="collapse navbar-collapse js-navbar-collapse">
+		          <ul class="navbar-nav nav navbar-right">
+		            
+<li><a href="https://gaoxiang9430.github.io/"><font size="2" color="Black" face="Arial"> HOME</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/post"><font size="2" color="Black" face="Arial"> BLOG</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/rhesis"><font size="2" color="Black" face="Arial"> CATCH</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/tags"><font size="2" color="Black" face="Arial"> TAGS</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/about"><font size="2" color="Black" face="Arial"> ABOUT</font></a></li>
+
+		          </ul>
+		        </div>
+		    </div>
+		  </div>
+		  <div class=divcss5>
+		  	<font size="7" color="#292421">Xiang's Blog</font><br>
+		  	<font size="5" color="#393431"><p style="font-family:STXingkai"><b>但行好事，莫问前程</b></p></font>
+		  	<br><br>
+		  </div>
+		</div>
+    </div>
+    
+    <div class="container">
+    <hr />
+
+<div class="row">
+  <div class="col-sm-10">
+    <div class="post-header">
+      <h1 class="post-title-main">程序分析中的 {path,context,flow}-sensitive 问题</h1>
+      <p class="text-muted">Sep 28, 2016</p>
+
+    </div>
+    <div class="post-content">
+      <p>题主想要不同语言的定义，我只熟悉OO语言，所以我只解释OO程序里的概念。不过知道OO语言的之后，C的也基本能触类旁通，因为它们都是imperative语言。Functional语言的context-sensitivity我猜应该也是相通的，至于functional语言的flow-和path-sensitivity我就不知道是怎么回事了。</p>
+<p>通常所说的xxx-sensitive是指静态分析中用于降低误报（false positive）的技术，最常提的xxx正是题主所说的path, context以及flow。要具体解释这几个概念，首先我们来看看静态分析怎么产生false positive，然后我们再来看看如何用这几个技术（或者说概念）消除相应的false positive。</p>
+<p>我们做静态分析时，无论是分析源代码还是目标代码，我们分析的对象（方法、语句、变量）都只有一份：同一个方法我们只会写一个方法体（方法体里的语句也就只有一份），同一个变量我们只会声明一次。然而动态运行程序的时候：
+1. 一个方法可能会被调用N次，每次调用的上下文可以不一样，不同上下文中这个方法里变量的值会不同；
+2. 一个方法里，一个变量在不同位置的值也会不一样。例如一个变量v，在方法执行到第1行和第10行的值会不同；
+3. 一个方法里同一个位置的变量的值在程序执行不同路径时也不一样。例如方法foo第10行要用变量v，第10行之前有一个if-else分支会修改v的值，那么程序途径true branch和false branch到达foo第10行时，v的值又不同。
+这样，我们写的方法、语句、变量在动态运行时仿佛有了“分身”，每个“分身”都自己的值（或者说属性）。静态的时候分析工具对于同一个对象只能看到一个实体，如果直接这么分析，一个变量所有“分身”的相关属性会全部合并，并且一个变量在的属性合并了，还会影响其它变量的分析结果，false positive就这么产生了。要想用静态分析得到准确的结果，就得为分析的对象模拟动态运行时“分身”。</p>
+<p>按照我的理解，xxx-sensitive就是在静态分析时，按照xxx给程序里的对象（模拟动态运行）创建“分身”（或者说按照xxx区分分析对象）：
+1. 按照上下文区分叫做context-sensitive；
+2. 按照位置区分叫做flow-sensitive；
+3. 按照路径区分叫做path-sensitive。</p>
+<p>区分之后再分析可以减少false positive。但是静态不可能完全模拟动态的所有情况，因为一旦有递归和循环，理论上你写下的方法和变量就能产生无穷无尽的“分身”。所以静态分析只能或多或少地通过xxx-sensitive技术减少false positive，而不可能消除。</p>
+<p>链接：https://www.zhihu.com/question/35167483/answer/62199381<!-- raw HTML omitted -->
+来源：知乎<!-- raw HTML omitted -->
+著作权归作者所有，转载请联系作者获得授权。<!-- raw HTML omitted --></p>
+    </div>
+    <div class="post-footer">
+      <a href="https://gaoxiang9430.github.io/post" class="btn btn-primary btn-block btn-lg">View All 27 Articles →</a>
+
+    </div>
+    
+		
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
+
+</div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <footer>
+<div style="filter:alpha(opacity=60);-moz-opacity:0.5;opacity:0.5; -khtml-opacity: 0.5;">
+	<div>
+		<div style="float:left; text-align:left"><font size="2" color="Black" face="Arial">Built with <a href="http://gohugo.io/">Hugo</a> (0.72.0)</font></div>
+		<div style="float:right; text-align:right"><font size="2" color="Black" face="Arial">Gao Xiang</font></div>
+	</div></br>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://gaoxiang9430.github.io/javascripts/shiori.js"></script>
+    
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </body>
+</html>
+

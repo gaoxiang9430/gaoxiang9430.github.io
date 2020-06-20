@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Program analysis on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/program-analysis/</link>
+    <description>Recent content in Program analysis on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Dec 2016 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/program-analysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Precise Interprocedural DataFlow Analysis Via Graph Reachability</title>
+      <link>https://gaoxiang9430.github.io/post/precise-interprocedural-dataflow-analysis-via-graph-reachabilit/</link>
+      <pubDate>Sat, 24 Dec 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/precise-interprocedural-dataflow-analysis-via-graph-reachabilit/</guid>
+      <description>Data flow analysis can be used to find the data dependency between different functions, statements and variables. For current programming language, data flow analysis is a very complex problem. In the 1990s, there are some reseaches proposed some good ideas to deal with this problem. Thomas[1] etc proposed to transform dataflow-analysis into a graph-reachability problem. In this paper, they defined a IFDS problem(interprocedural, finite, distributive, subset).
+ Super Graph In the IFDS problem, the program is represented using a directed graph called super graph.</description>
+    </item>
+    
+    <item>
+      <title>程序分析中的 {path,context,flow}-sensitive 问题</title>
+      <link>https://gaoxiang9430.github.io/post/%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84-pathcontextflow-sensitive-%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 28 Sep 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84-pathcontextflow-sensitive-%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;题主想要不同语言的定义，我只熟悉OO语言，所以我只解释OO程序里的概念。不过知道OO语言的之后，C的也基本能触类旁通，因为它们都是imperative语言。Functional语言的context-sensitivity我猜应该也是相通的，至于functional语言的flow-和path-sensitivity我就不知道是怎么回事了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

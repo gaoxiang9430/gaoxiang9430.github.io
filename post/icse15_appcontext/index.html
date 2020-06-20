@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://gaoxiang9430.github.io/stylesheets/shiori.css">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gaoxiang9430.github.io/res/favicon.ico">
+    <title>Xiang</title>
+    <style> 
+		.divcss5{text-align:center} 
+		.navbar{
+    		background:rgba(0,0,0,0);
+		}
+	</style> 
+    
+    
+
+  </head>
+  <body>
+    <div style="background-image:url(https://gaoxiang9430.github.io/res/background.jpg);width:background-size:100% auto;height:280px;background-repeat:repeat;">
+		<div class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+		    <div>
+		        <div class="collapse navbar-collapse js-navbar-collapse">
+		          <ul class="navbar-nav nav navbar-right">
+		            
+<li><a href="https://gaoxiang9430.github.io/"><font size="2" color="Black" face="Arial"> HOME</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/post"><font size="2" color="Black" face="Arial"> BLOG</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/rhesis"><font size="2" color="Black" face="Arial"> CATCH</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/tags"><font size="2" color="Black" face="Arial"> TAGS</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/about"><font size="2" color="Black" face="Arial"> ABOUT</font></a></li>
+
+		          </ul>
+		        </div>
+		    </div>
+		  </div>
+		  <div class=divcss5>
+		  	<font size="7" color="#292421">Xiang's Blog</font><br>
+		  	<font size="5" color="#393431"><p style="font-family:STXingkai"><b>但行好事，莫问前程</b></p></font>
+		  	<br><br>
+		  </div>
+		</div>
+    </div>
+    
+    <div class="container">
+    <hr />
+
+<div class="row">
+  <div class="col-sm-10">
+    <div class="post-header">
+      <h1 class="post-title-main">AppContext: Differentiating Malicious and Benign Mobile App Behaviors Using Context</h1>
+      <p class="text-muted">Sep 24, 2016</p>
+
+    </div>
+    <div class="post-content">
+      <p>　  Mobile malware attempts to evade detection during app analysis by mimicking security-sensitive behaviors of benigh apps that provide similar functionality, making it much more difficult to detect. This paper propose that the malicious and benign behaviors within apps can be differentialted based on the context that trigger security sensitive behaviors, ie., the event and conditions that cause the security-sensitive behaviors to occur. And they introduced AppContext, an approch of static program analysis that extracts the contexts of security-sensitive behaviors to assist app analysis.</p>
+<hr>
+<h4 id="introcuction-">Introcuction</h4>
+<p>　Similar to PC malware, mobile malware has begun taking steps to evade detection by camouflaging as benign apps, whichh make it more difficult to by detected by analysis tools. In android, a large portion of behaviors are triggered by system events, which is much hard to be detected by users. And on the other hand, it is very likely that the reviewers and tools cannot detect the malware when the environmrntal conditions that trigger the malicious behaviors are not met.
+　Based on above abservation, AppContext produced to use the context to determine whether the behavior is benign or not. So, expressing contexts in mobile apps is a non-trivial task. They define a context for a security-sensitive behavior as a tuple containing an activation event and a series of context factors.</p>
+<hr>
+<h4 id="appcontext-">AppContext</h4>
+<h5 id="security-sensitive-behavior-">Security-sensitive Behavior</h5>
+<p>　AppContext consider security-sensitive behavior as an invocation of a security-sensitive method. They divided security-sensitive methods into 3 categories:</p>
+<pre><code>1. permission-protected methods
+2. sources or sinks in information flow
+3. reflection methods or dynamic loading methods
+</code></pre>
+<hr>
+<h5 id="activation-events-">Activation Events</h5>
+<p>　The activation events are the external event that trigger the security-sensitive methods, including UI events(user interaction), system events hardware events(pressing HOME). After geting the extended call graph(including ICC) and security-sensitive method, activation events can be easily determined.</p>
+<hr>
+<h5 id="context-factor-">Context Factor</h5>
+<p>　From the ECG, we can fing all the path from activation event to security-sensitive methods. AppContext extracts those paths and forms RICFG(reduced inter-procedure control-flow graph). For statement Si in the path, if it is a conditional statement, its conditional vaules will be considered as the context factor.</p>
+
+    </div>
+    <div class="post-footer">
+      <a href="https://gaoxiang9430.github.io/post" class="btn btn-primary btn-block btn-lg">View All 27 Articles →</a>
+
+    </div>
+    
+		
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
+
+</div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <footer>
+<div style="filter:alpha(opacity=60);-moz-opacity:0.5;opacity:0.5; -khtml-opacity: 0.5;">
+	<div>
+		<div style="float:left; text-align:left"><font size="2" color="Black" face="Arial">Built with <a href="http://gohugo.io/">Hugo</a> (0.72.0)</font></div>
+		<div style="float:right; text-align:right"><font size="2" color="Black" face="Arial">Gao Xiang</font></div>
+	</div></br>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://gaoxiang9430.github.io/javascripts/shiori.js"></script>
+    
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </body>
+</html>
+

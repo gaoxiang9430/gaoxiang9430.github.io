@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://gaoxiang9430.github.io/stylesheets/shiori.css">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gaoxiang9430.github.io/res/favicon.ico">
+    <title>Xiang</title>
+    <style> 
+		.divcss5{text-align:center} 
+		.navbar{
+    		background:rgba(0,0,0,0);
+		}
+	</style> 
+    
+    
+
+  </head>
+  <body>
+    <div style="background-image:url(https://gaoxiang9430.github.io/res/background.jpg);width:background-size:100% auto;height:280px;background-repeat:repeat;">
+		<div class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+		    <div>
+		        <div class="collapse navbar-collapse js-navbar-collapse">
+		          <ul class="navbar-nav nav navbar-right">
+		            
+<li><a href="https://gaoxiang9430.github.io/"><font size="2" color="Black" face="Arial"> HOME</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/post"><font size="2" color="Black" face="Arial"> BLOG</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/rhesis"><font size="2" color="Black" face="Arial"> CATCH</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/tags"><font size="2" color="Black" face="Arial"> TAGS</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/about"><font size="2" color="Black" face="Arial"> ABOUT</font></a></li>
+
+		          </ul>
+		        </div>
+		    </div>
+		  </div>
+		  <div class=divcss5>
+		  	<font size="7" color="#292421">Xiang's Blog</font><br>
+		  	<font size="5" color="#393431"><p style="font-family:STXingkai"><b>但行好事，莫问前程</b></p></font>
+		  	<br><br>
+		  </div>
+		</div>
+    </div>
+    
+    <div class="container">
+    <hr />
+
+<div class="row">
+  <div class="col-sm-10">
+    <div class="post-header">
+      <h1 class="post-title-main">Precise Interprocedural DataFlow Analysis Via Graph Reachability</h1>
+      <p class="text-muted">Dec 24, 2016</p>
+
+    </div>
+    <div class="post-content">
+      <p>Data flow analysis can be used to find the data dependency between different functions, statements and variables. For current programming language, data flow analysis is a very complex problem. In the 1990s, there are some reseaches proposed some good ideas to deal with this problem. Thomas<a href="#1">[1]</a> etc proposed to transform dataflow-analysis into a graph-reachability problem. In this paper, they defined a IFDS problem(interprocedural, finite, distributive, subset).</p>
+<hr>
+<h4 id="super-graph-">Super Graph</h4>
+<p>In the IFDS problem, the program is represented using a directed graph called super graph. Each flow graph has start nodes, exit nodes. The other nodes represent the statements except a procedure call which is represented by two nodes, a call node and a return-site node. The edge in the super graph is the relationship between different statements including the intraprocedural edges and the procedure call. For procedure call statement, super graph has three kinds of edges:</p>
+<pre><code>1. call-to-return-site: intraprocedural edge from call ro return-site, which is used to conduct the procedural summary(will be mentioned later).
+2. call-to-start: intre-procedural edge from c to the start node of the called procedure.
+3. exit-to-return-dite: intre-procedural edge from the exit node of the called procedure to r.
+</code></pre>
+<p>Actually, a modified control flow graph can be used as the super graph.</p>
+<hr>
+<h4 id="ifds-problem-">IFDS problem</h4>
+<p>The IFDS problem is based on the super graph. It introduce a domain D field which represents the data flow fact. Then they defined distributive functions which reflect the transmission between data flow facts along with the super graph edge. Here is an example of flow function:
+<img src="https://gaoxiang9430.github.io/image/flow_function.png" alt="image">
+Zero means the initialized state, so it is always true. When the statement <code>x.f = in</code> is excuted, it will create a edge from in to x.f in the flow fact. Just as the edges in super graph, there are four kinds flow function: normal flow function, call flow function, return flow function and callToReturn flow function.</p>
+<hr>
+<h4 id="from-dataflow-problem-to-path-reachability-problem-">From Dataflow Problem to Path Reachability Problem</h4>
+<p>After build the flow fact graph, the data flow problem can be converted to a path reachability problem. An edge (Sp, D1) -&gt; (N, D2) states that the analysis concluded that D2 holds at N if D1 hotlds at point Sp, that is there is path from Sp to N in the super graph, as well a fact flow from D1 to D2 along with the path.</p>
+<hr>
+<h4 id="algorithm-for-reachability-problem-">Algorithm for Reachability Problem</h4>
+<p><img src="https://gaoxiang9430.github.io/image/algorithm.png" alt="">
+This algorithm use PathEdge to record the valid flow fact edges in the IFDS problem. Summary edge is used to record the same-level realizable paths that run from nodes of the form (n, d1), where n belong to Call, to (returnSite (n), d2). In terms of the dataflow problem being solved, summary edges represent (partial) information about how the dataflow value after a call depends on the dataflow value before the call. WorkListaccumulates sets of path edges and summary edges.
+If statement n is call statement(line 14-19), it will put path edge (Sp, d) -&gt; (Sp, d) to the worklist. In this case path edge (Sp, d) -&gt; (Sp, d) represents the 0-length suffix of a realizable path from (Smain, 0) -&gt; (Sp, d). If there is a summary edge or edge in super graph, it will insert a path from call site to return site.
+If statement n is exit statement(line 21-28), it will create a new summary edge in line 25. and add a path edge from call site to return site.
+As for a normal statement, it will propagate flow fact and add path edge as well.</p>
+<p>After this, the path edge will record all the flow fact infomation. If we want to calculate the data flow between variable a and b, we can chech a reachability of the flow fact. If we can find a flow fact path between a and b, a data dependency is found too.</p>
+<!-- raw HTML omitted -->
+
+    </div>
+    <div class="post-footer">
+      <a href="https://gaoxiang9430.github.io/post" class="btn btn-primary btn-block btn-lg">View All 27 Articles →</a>
+
+    </div>
+    
+		
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
+
+</div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <footer>
+<div style="filter:alpha(opacity=60);-moz-opacity:0.5;opacity:0.5; -khtml-opacity: 0.5;">
+	<div>
+		<div style="float:left; text-align:left"><font size="2" color="Black" face="Arial">Built with <a href="http://gohugo.io/">Hugo</a> (0.72.0)</font></div>
+		<div style="float:right; text-align:right"><font size="2" color="Black" face="Arial">Gao Xiang</font></div>
+	</div></br>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://gaoxiang9430.github.io/javascripts/shiori.js"></script>
+    
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </body>
+</html>
+

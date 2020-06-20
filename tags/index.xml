@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/</link>
+    <description>Recent content in Tags on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jun 2020 16:31:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>research</title>
+      <link>https://gaoxiang9430.github.io/tags/research/</link>
+      <pubDate>Fri, 19 Jun 2020 16:31:18 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://gaoxiang9430.github.io/tags/life/</link>
+      <pubDate>Fri, 28 Apr 2017 22:05:18 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://gaoxiang9430.github.io/tags/blog/</link>
+      <pubDate>Fri, 03 Mar 2017 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fuzzing</title>
+      <link>https://gaoxiang9430.github.io/tags/fuzzing/</link>
+      <pubDate>Fri, 03 Mar 2017 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/fuzzing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android</title>
+      <link>https://gaoxiang9430.github.io/tags/android/</link>
+      <pubDate>Mon, 02 Jan 2017 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://gaoxiang9430.github.io/tags/architecture/</link>
+      <pubDate>Mon, 02 Jan 2017 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Program analysis</title>
+      <link>https://gaoxiang9430.github.io/tags/program-analysis/</link>
+      <pubDate>Sat, 24 Dec 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/program-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>detection</title>
+      <link>https://gaoxiang9430.github.io/tags/detection/</link>
+      <pubDate>Wed, 16 Nov 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Taint</title>
+      <link>https://gaoxiang9430.github.io/tags/taint/</link>
+      <pubDate>Wed, 12 Oct 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/taint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CFI</title>
+      <link>https://gaoxiang9430.github.io/tags/cfi/</link>
+      <pubDate>Thu, 06 Oct 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/cfi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://gaoxiang9430.github.io/tags/security/</link>
+      <pubDate>Thu, 06 Oct 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Non-function property</title>
+      <link>https://gaoxiang9430.github.io/tags/non-function-property/</link>
+      <pubDate>Sun, 07 Aug 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/non-function-property/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assamble</title>
+      <link>https://gaoxiang9430.github.io/tags/assamble/</link>
+      <pubDate>Thu, 26 May 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/assamble/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://gaoxiang9430.github.io/tags/git/</link>
+      <pubDate>Wed, 11 May 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

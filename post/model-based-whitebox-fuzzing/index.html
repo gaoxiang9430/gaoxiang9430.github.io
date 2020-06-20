@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://gaoxiang9430.github.io/stylesheets/shiori.css">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gaoxiang9430.github.io/res/favicon.ico">
+    <title>Xiang</title>
+    <style> 
+		.divcss5{text-align:center} 
+		.navbar{
+    		background:rgba(0,0,0,0);
+		}
+	</style> 
+    
+    
+
+  </head>
+  <body>
+    <div style="background-image:url(https://gaoxiang9430.github.io/res/background.jpg);width:background-size:100% auto;height:280px;background-repeat:repeat;">
+		<div class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+		    <div>
+		        <div class="collapse navbar-collapse js-navbar-collapse">
+		          <ul class="navbar-nav nav navbar-right">
+		            
+<li><a href="https://gaoxiang9430.github.io/"><font size="2" color="Black" face="Arial"> HOME</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/post"><font size="2" color="Black" face="Arial"> BLOG</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/rhesis"><font size="2" color="Black" face="Arial"> CATCH</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/tags"><font size="2" color="Black" face="Arial"> TAGS</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/about"><font size="2" color="Black" face="Arial"> ABOUT</font></a></li>
+
+		          </ul>
+		        </div>
+		    </div>
+		  </div>
+		  <div class=divcss5>
+		  	<font size="7" color="#292421">Xiang's Blog</font><br>
+		  	<font size="5" color="#393431"><p style="font-family:STXingkai"><b>但行好事，莫问前程</b></p></font>
+		  	<br><br>
+		  </div>
+		</div>
+    </div>
+    
+    <div class="container">
+    <hr />
+
+<div class="row">
+  <div class="col-sm-10">
+    <div class="post-header">
+      <h1 class="post-title-main">Model-based Whitebox Fuzzing</h1>
+      <p class="text-muted">Mar 3, 2017</p>
+
+    </div>
+    <div class="post-content">
+      <p>Many real-world programs take highly structured and complex files as inputs. The automated testing of those programs is non-trivial. Traditional writebox test based on fuzzing or symbolic excution may produce inputs which do not satisfy file format. And blackbox test based on fuzzing can not reach the crash location quickly. Model-based Whitebox Fuzzing(MoWF) combine model-based blackbox fuzzing and the writebox fuzzing that generates valid files efficiently that exercise critical target lications effectively.</p>
+<hr>
+<h4 id="introduction-">introduction</h4>
+<p>For some file-processing programs, the exercising of some paths may depend on the presense of a specific data chunk, a specific value of a data field in a data chunk or/and the intergrity of the data chunk. Hence, an efficient test generation technique not only sets specific values of the fields but also adds/removes complete chunks and establishes their integrity. Model-based blackbox fuzzers may generate valid random file which satisfy the file format. However, those random inputs can not guarantee high path coverange. Whitebox fuzzers empoly symbolic execution to explore program paths more systematically. Given a valid file, they can generate the specific value for data field quite comfortably. However, when it comes to adding or deleting data chunks or enforcing integrity constraints, they are bogged down by the large search space of invaild inputs.
+MoWF is the marrige of model-based blackbox fuzzers and writebox fuzzers. Unlike model-based blackbox fuzzing, MoWF is directed and enumerates the specific values of data field more systematically. Unlike whitebox fuzzing, MoWF does not get bogged down by the large search space of invalid inputs or require any seed input files.</p>
+<hr>
+<h4 id="model-based-whritebox-fuzzing-">Model-based Whritebox Fuzzing</h4>
+<h5 id="initializztion-">Initializztion</h5>
+<p>MoWF take a program <em>P</em> an input model <em>M</em>, a set of target location <em>L</em> in <em>P</em>, and seed input <em>T</em>. If no target location is provided, MoWF uses static analysis to identify dangerous lication in the program, such location for potential null pointer dereferences or divisions by zero. MoWF use IDAPro to dissamble the program binary <em>P</em> and perform some lightweight analysis to indetify instructions that conform th the patterns shown in the following list:</p>
+<pre><code>div register
+div [ebp + argument_offset]
+mov operand, [register]
+mov operand, [ebp + argument_offset]
+mov [register], operand
+mov [ebp + argument_offset], operand
+</code></pre><p>If there is no seed inputs provided, MoWF leverages the input model <em>M</em> to instantiate a seed file.</p>
+<hr>
+<h5 id="selection-seed-file-">Selection Seed file</h5>
+<p>MoWF selects an input <em>t</em> whose distance to target location <em>l</em> is smallest as seed file. The distance between an input <em>t</em> and a program location <em>l</em> is defined as follows.</p>
+<pre><code>Given an input t, a program P and a program location l in P. Let Ω(t) be the set of nodes in the Control Flow Graph (CFG) of P that are exercised by t. The distance δ(t, l) from t to l is the number of nodes on the shortest path from any b ∈ Ω(t) to l.
+</code></pre><p>The remaining seed files are sent to the file cracker to construct the fragment pool. And the fragment pool take an important role during data chunk transplantation.</p>
+<hr>
+<h5 id="determine-crucial-ifs-">Determine crucial IFs</h5>
+<p>Next, MoWF executes <em>t</em> on <em>P</em> to determine the crucial IFs <em>N</em>. A crucial IFs is evaluated in different directions depending on the type of the data chunks prisent in <em>t</em>. The definition of Crucial IFs is as follows:</p>
+<pre><code>Given input t for program P and a target location l in P, an if-statement b in P is crucial if
+1) the statement b is executed by t in P,
+2) only one direction of b has been taken,
+3) the negation of the branch condition at b reduces the distance to l, and
+4) let φ(b) be the branch condition at b; the outcome of φ(b)
+depends on a field in t that specifies the chunk’s type.
+</code></pre><p>For each crucial IF identified, MoWF employs the file stitcher to negate its branch condition by adding or removing a chunk.</p>
+<hr>
+<h5 id="file-repair-">File Repair</h5>
+<p>Given a file <em>f</em> and the input model <em>M</em>, the file repair tool re-establishes the integrity of the file. MoWF utilizes the fixup and transformers that can be specified in <em>M</em> in the Peach framework.</p>
+<hr>
+<h5 id="symbolic-execution-">Symbolic Execution</h5>
+<p>After creating the input file, MoWF reuses the target search strategy for symbolic exploration implemented in Herculers. The search stategy of Hercules is targeted in the sense that it explores program paths towards a target location by pruning irrelevant paths.</p>
+<hr>
+<h5 id="handling-incomplete-memory-modeling-">Handling Incomplete Memory Modeling</h5>
+<p>Hercules do not support memory allocation with symbolic size. If a symbolic size is given it is concretized before allocating heap memory. The concretization mechanism could prevent us from exposing heap buffer overflow vulnerabilities. In the extension of Hercules, they leverage recent advance in maximal satisfication with Z3 using a whitelist to mark certain clauses as &ldquo;soft clauses&rdquo;.</p>
+
+    </div>
+    <div class="post-footer">
+      <a href="https://gaoxiang9430.github.io/post" class="btn btn-primary btn-block btn-lg">View All 27 Articles →</a>
+
+    </div>
+    
+		
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
+
+</div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <footer>
+<div style="filter:alpha(opacity=60);-moz-opacity:0.5;opacity:0.5; -khtml-opacity: 0.5;">
+	<div>
+		<div style="float:left; text-align:left"><font size="2" color="Black" face="Arial">Built with <a href="http://gohugo.io/">Hugo</a> (0.72.0)</font></div>
+		<div style="float:right; text-align:right"><font size="2" color="Black" face="Arial">Gao Xiang</font></div>
+	</div></br>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://gaoxiang9430.github.io/javascripts/shiori.js"></script>
+    
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </body>
+</html>
+

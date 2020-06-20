@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://gaoxiang9430.github.io/stylesheets/shiori.css">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gaoxiang9430.github.io/res/favicon.ico">
+    <title>Xiang</title>
+    <style> 
+		.divcss5{text-align:center} 
+		.navbar{
+    		background:rgba(0,0,0,0);
+		}
+	</style> 
+    
+    
+
+  </head>
+  <body>
+    <div style="background-image:url(https://gaoxiang9430.github.io/res/background.jpg);width:background-size:100% auto;height:280px;background-repeat:repeat;">
+		<div class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+		    <div>
+		        <div class="collapse navbar-collapse js-navbar-collapse">
+		          <ul class="navbar-nav nav navbar-right">
+		            
+<li><a href="https://gaoxiang9430.github.io/"><font size="2" color="Black" face="Arial"> HOME</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/post"><font size="2" color="Black" face="Arial"> BLOG</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/rhesis"><font size="2" color="Black" face="Arial"> CATCH</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/tags"><font size="2" color="Black" face="Arial"> TAGS</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/about"><font size="2" color="Black" face="Arial"> ABOUT</font></a></li>
+
+		          </ul>
+		        </div>
+		    </div>
+		  </div>
+		  <div class=divcss5>
+		  	<font size="7" color="#292421">Xiang's Blog</font><br>
+		  	<font size="5" color="#393431"><p style="font-family:STXingkai"><b>但行好事，莫问前程</b></p></font>
+		  	<br><br>
+		  </div>
+		</div>
+    </div>
+    
+    <div class="container">
+    <hr />
+
+<div class="row">
+  <div class="col-sm-10">
+    <div class="post-header">
+      <h1 class="post-title-main">X86汇编语言学习</h1>
+      <p class="text-muted">May 26, 2016</p>
+
+    </div>
+    <div class="post-content">
+      <p>X86是intel芯片的指令集，本文中描述了部分常用的x86指令．</p>
+<h4 id="1xor亦或-">1，XOR亦或</h4>
+<p>XOR eax，eax；表示将寄存器eax置零</p>
+<h4 id="2test测试">2，Test测试</h4>
+<p>只设置状态寄存器，不修改寄存器本身，这是与and最本质的区别
+test eax,eax;表示如果eax=0，则将Z置1</p>
+<h4 id="3jl-跳转">3、jl 跳转</h4>
+<p><code>cmp eax, 4,   jl short 00412DEF</code> 表示如果eax小于4 则发生跳转</p>
+<h4 id="4无号数运算比较后使用的条件跳越指令编辑">4、无号数运算(比较)后使用的条件跳越指令[编辑]</h4>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th align="center">意义</th>
+<th align="right">条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>je</td>
+<td align="center">若等于则跳转 	x = y</td>
+<td align="right">ZF=1</td>
+</tr>
+<tr>
+<td>jne</td>
+<td align="center">若不等于则跳越	x≠y</td>
+<td align="right">ZF=0</td>
+</tr>
+<tr>
+<td>ja</td>
+<td align="center">若高于则跳越</td>
+<td align="right">CF=0且ZF=0</td>
+</tr>
+<tr>
+<td>jnbe</td>
+<td align="center">若不低于则跳越	x &gt; y</td>
+<td align="right">CF=0且ZF=0</td>
+</tr>
+<tr>
+<td>jae</td>
+<td align="center">若高于或等于则跳越</td>
+<td align="right">x≧y	CF=0</td>
+</tr>
+<tr>
+<td>jnb</td>
+<td align="center">若不低于或等于则跳越</td>
+<td align="right">x≧y	CF=0</td>
+</tr>
+<tr>
+<td>jb</td>
+<td align="center">若低于则跳越</td>
+<td align="right">x 小于 y	CF=1</td>
+</tr>
+<tr>
+<td>jnae</td>
+<td align="center">若不高于或等于则跳越	x 小于 y</td>
+<td align="right">CF=1</td>
+</tr>
+<tr>
+<td>jbe</td>
+<td align="center">若低于或等于则跳越</td>
+<td align="right">CF=1或ZF=1</td>
+</tr>
+<tr>
+<td>jna</td>
+<td align="center">若不高于则跳越	x≦y</td>
+<td align="right">CF=1或ZF=1</td>
+</tr>
+<tr>
+<td>有号数运算(比较)后使用的条件跳越指令[编辑]</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th align="center">意义</th>
+<th align="right">条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>je</td>
+<td align="center">若等于则跳越	x = y</td>
+<td align="right">ZF=1</td>
+</tr>
+<tr>
+<td>jne</td>
+<td align="center">若不等于则跳越	x≠y</td>
+<td align="right">ZF=0</td>
+</tr>
+<tr>
+<td>jg</td>
+<td align="center">若大于则跳越</td>
+<td align="right">ZF=0且SF=OF</td>
+</tr>
+<tr>
+<td>jnle</td>
+<td align="center">若不低于或等于则跳越	x &gt; y</td>
+<td align="right">ZF=0且SF=OF</td>
+</tr>
+<tr>
+<td>jge</td>
+<td align="center">若高于于或等于则跳越</td>
+<td align="right">SF=OF</td>
+</tr>
+<tr>
+<td>jnl</td>
+<td align="center">若不低于则跳越	x≧y</td>
+<td align="right">SF=OF</td>
+</tr>
+<tr>
+<td>jl</td>
+<td align="center">若低于则跳越</td>
+<td align="right">SF≠OF</td>
+</tr>
+<tr>
+<td>jngl</td>
+<td align="center">若不大于或等于则跳越	x 小于 y</td>
+<td align="right">SF≠OF</td>
+</tr>
+<tr>
+<td>jle</td>
+<td align="center">若低于或等于则跳越</td>
+<td align="right">ZF=1或SF≠OF</td>
+</tr>
+<tr>
+<td>jng</td>
+<td align="center">若不大于则跳越	x≦y</td>
+<td align="right">ZF=1或SF≠OF</td>
+</tr>
+</tbody>
+</table>
+<p>状态判断的条件跳越指令[编辑]</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th align="center">意义</th>
+<th align="right">条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jc</td>
+<td align="center">若进位则跳越</td>
+<td align="right">CF=1</td>
+</tr>
+<tr>
+<td>jnc</td>
+<td align="center">若无进位则跳越</td>
+<td align="right">CF=0</td>
+</tr>
+<tr>
+<td>js</td>
+<td align="center">若为负数则跳越</td>
+<td align="right">SF=1</td>
+</tr>
+<tr>
+<td>jns</td>
+<td align="center">若为正数则跳越</td>
+<td align="right">SF=0</td>
+</tr>
+<tr>
+<td>jz</td>
+<td align="center">若等于0则跳越</td>
+<td align="right">ZF=1</td>
+</tr>
+<tr>
+<td>jnz</td>
+<td align="center">若不等于0则跳越</td>
+<td align="right">ZF=0</td>
+</tr>
+<tr>
+<td>jp</td>
+<td align="center">若同位则跳越</td>
+<td align="right">PF=1</td>
+</tr>
+<tr>
+<td>jnp</td>
+<td align="center">若没有同位则跳越</td>
+<td align="right">PF=0</td>
+</tr>
+<tr>
+<td>jpe</td>
+<td align="center">若偶同位则跳越</td>
+<td align="right">PF=1</td>
+</tr>
+<tr>
+<td>jpo</td>
+<td align="center">若奇同位则跳越</td>
+<td align="right">PF=0</td>
+</tr>
+<tr>
+<td>jo</td>
+<td align="center">若溢出则跳越</td>
+<td align="right">OF=1</td>
+</tr>
+<tr>
+<td>jno</td>
+<td align="center">若没有溢出则跳越</td>
+<td align="right">OF=0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="5x86寄存器">5、X86寄存器：</h4>
+<p>X86处理器中有8个32位的通用寄存器。由于历史的原因，EAX通常用于计算，ECX通常用于循环变量计数。ESP和EBP有专门用途，ESP指示栈指针(用于指示栈顶位置)，而EBP则是基址指针（用于指示子程序或函数调用的基址指针）。如图中所示，EAX、EBX、ECX和EDX的前两个高位字节和后两个低位字节可以独立使用，其中两位低字节又被独立分为H和L部分，这样做的原因主要是考虑兼容16位的程序，具体兼容匹配细节请查阅相关文献。
+应用寄存器时，其名称大小写是不敏感的，如EAX和eax没有区别。</p>
+<h4 id="6-寻址模式">6、 寻址模式</h4>
+<p>现代X86处理器具有232字节的寻址空间。在上面的例子中，我们用标签(label)表示内存区域，这些标签在实际汇编时，均被32位的实际地址代替。除了支持这种直接的内存区域描述，X86还提供了一种灵活的内存寻址方式，即利用最多两个32位的寄存器和一个32位的有符号常数相加计算一个内存地址，其中一个寄存器可以左移1、2或3位以表述更大的空间。下面例子是汇编程序中常见的方式
+mov eax, [ebx]	; 将ebx值指示的内存地址中的4个字节传送到eax中
+mov [var], ebx	; 将ebx的内容传送到var的值指示的内存地址中.
+mov eax, [esi-4]	; 将esi-4值指示的内存地址中的4个字节传送到eax中
+mov [esi+eax], cl	; 将cl的值传送到esi+eax的值指示的内存地址中
+mov edx, [esi+4<em>ebx]    	; 将esi+4</em>ebx值指示的内存中的4个字节传送到edx
+下面是违反规则的例子:
+mov eax, [ebx-ecx]	; 只能用加法
+mov [eax+esi+edi], ebx    	; 最多只能有两个寄存器参与运算</p>
+<h4 id="7lea-load-effective-address">7、lea— Load effective address</h4>
+<p> lea实际上是一个载入有效地址指令，将第二个操作数表示的地址载入到第一个操作数（寄存器）中。其语法如下所示：
+Syntax
+lea reg32,mem
+Examples
+lea eax, [var] — var指示的地址载入eax中.
+lea edi, [ebx+4<em>esi] — ebx+4</em>esi表示的地址载入到edi中</p>
+<h4 id="8inc-dec-increment-decrement">8、inc, dec— Increment, Decrement</h4>
+<p>inc,dec分别表示将操作数自加1，自减1，其语法如下所示：
+inc reg   inc mem    dec reg    dec mem</p>
+<h4 id="9imul-integer-multiplication整数相乘">9、imul— Integer Multiplication整数相乘</h4>
+<p>整数相乘指令，它有两种指令格式，一种为两个操作数，将两个操作数的值相乘，并将结果保存在第一个操作数中，第一个操作数必须为寄存器；第二种格式为三个操作数，其语义为：将第二个和第三个操作数相乘，并将结果保存在第一个操作数中，第一个操作数必须为寄存器。其语法如下所示：
+imul reg32,reg32
+imul reg32,mem
+imul reg32,reg32,con
+imul reg32,mem,con</p>
+<h4 id="10idiv-integer-division-整数除法">10、idiv— Integer Division 整数除法</h4>
+<p>idiv指令完成整数除法操作，idiv只有一个操作数，此操作数为除数，而被除数则为EDX:EAX中的内容（一个64位的整数），操作的结果有两部分：商和余数，其中商放在eax寄存器中，而余数则放在edx寄存器中。其语法如下所示：
+Syntax
+idiv reg32
+idiv mem</p>
+<h4 id="11neg-negate">11、neg— Negate</h4>
+<p>取负指令。语法为：
+neg reg
+neg mem
+Example： neg eax — EAX → - EAX</p>
+<h4 id="12shl-shr-shift-left-shift-right位移指令">12、shl, shr— Shift Left, Shift Right位移指令</h4>
+<p>位移指令，有两个操作数，第一个操作数表示被操作数，第二个操作数指示位移的数量。其语法如下所示：
+shl reg,con8
+shl mem,con8
+shl reg,cl
+shl mem,cl</p>
+<h4 id="13控制转移指令">13、控制转移指令</h4>
+<p>X86处理器维持着一个指示当前执行指令的指令指针（IP），当一条指令执行后，此指针自动指向下一条指令。IP寄存器不能直接操作，但是可以用控制流指令更新。
+一般用标签（label）指示程序中的指令地址，在X86汇编代码中，可以在任何指令前加入标签。如：
+mov esi, [ebp+8]begin: xor ecx, ecx       mov eax, [esi]</p>
+<h4 id="13callret-subroutine-call-and-return-函数调用">13、call, ret— Subroutine call and return 函数调用</h4>
+<p>这两条指令实现子程序（过程、函数等意思）的调用及返回。call指令首先将当前执行指令地址入栈，然后无条件转移到由标签指示的指令。与其它简单的跳转指令不同，call指令保存调用之前的地址信息（当call指令结束后，返回到调用之前的地址）。
+ret指令实现子程序的返回机制，ret指令弹出栈中保存的指令地址，然后无条件转移到保存的指令地址执行。
+call，ret是函数调用中最关键的两条指令。具体细节见下面一部分的讲解。语法为：
+call label
+Ret</p>
+<h4 id="14段寄存器">14、段寄存器</h4>
+<p>X86中的包含了4个段寄存器CS, DS, SS, ES
+其中CS表示代码段寄存器，与IP配合CS：IP指向当前运行的指令。需要注意的是CS和IP不能通过mov指令进行修改，要修改IP内容只能通过jmp指令进行。
+DS表示数据段寄存器，例如DS=10000H，mov eax，[0] 表示将10000H处的内容放入eax中。
+SS表示栈的基地址，而SP表示栈顶，SS：SP指向栈顶。关于潜在的越界访问，可以使用两个寄存器，限制可以访问的栈空间。但是在8086cpu中并没有这样的机制来防止越界，因此在编程的时候要格外注意。</p>
+<h4 id="15si和di">15、Si和Di</h4>
+<p>Si和Di是与bx，dx具有相似功能的寄存器，只是si和di不能拆分成两个寄存器使用。只能使用{bx，bp}+{si，di}的方式进行诸如mov ax, [bx]这种方式的寻址。</p>
+<h4 id="16置零操作的位数">16、置零操作的位数</h4>
+<p>在有寄存器的时候，可以通过寄存器的大小指明指令操作的位数，在没有的情况下，用操作符X ptr指明内存的长度，X在汇编中可以是word或byte</p>
+    </div>
+    <div class="post-footer">
+      <a href="https://gaoxiang9430.github.io/post" class="btn btn-primary btn-block btn-lg">View All 27 Articles →</a>
+
+    </div>
+    
+		
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
+
+</div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <footer>
+<div style="filter:alpha(opacity=60);-moz-opacity:0.5;opacity:0.5; -khtml-opacity: 0.5;">
+	<div>
+		<div style="float:left; text-align:left"><font size="2" color="Black" face="Arial">Built with <a href="http://gohugo.io/">Hugo</a> (0.72.0)</font></div>
+		<div style="float:right; text-align:right"><font size="2" color="Black" face="Arial">Gao Xiang</font></div>
+	</div></br>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://gaoxiang9430.github.io/javascripts/shiori.js"></script>
+    
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </body>
+</html>
+

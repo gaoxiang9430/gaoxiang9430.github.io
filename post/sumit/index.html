@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://gaoxiang9430.github.io/stylesheets/shiori.css">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gaoxiang9430.github.io/res/favicon.ico">
+    <title>Xiang</title>
+    <style> 
+		.divcss5{text-align:center} 
+		.navbar{
+    		background:rgba(0,0,0,0);
+		}
+	</style> 
+    
+    
+
+  </head>
+  <body>
+    <div style="background-image:url(https://gaoxiang9430.github.io/res/background.jpg);width:background-size:100% auto;height:280px;background-repeat:repeat;">
+		<div class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+		    <div>
+		        <div class="collapse navbar-collapse js-navbar-collapse">
+		          <ul class="navbar-nav nav navbar-right">
+		            
+<li><a href="https://gaoxiang9430.github.io/"><font size="2" color="Black" face="Arial"> HOME</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/post"><font size="2" color="Black" face="Arial"> BLOG</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/rhesis"><font size="2" color="Black" face="Arial"> CATCH</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/tags"><font size="2" color="Black" face="Arial"> TAGS</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/about"><font size="2" color="Black" face="Arial"> ABOUT</font></a></li>
+
+		          </ul>
+		        </div>
+		    </div>
+		  </div>
+		  <div class=divcss5>
+		  	<font size="7" color="#292421">Xiang's Blog</font><br>
+		  	<font size="5" color="#393431"><p style="font-family:STXingkai"><b>但行好事，莫问前程</b></p></font>
+		  	<br><br>
+		  </div>
+		</div>
+    </div>
+    
+    <div class="container">
+    <hr />
+
+<div class="row">
+  <div class="col-sm-10">
+    <div class="post-header">
+      <h1 class="post-title-main">Forwarding: Four Big Bets For Better AI Research -- Sumit Gulwani</h1>
+      <p class="text-muted">Jun 19, 2020</p>
+
+    </div>
+    <div class="post-content">
+      <p>It&rsquo;s a big shift to change from being motivated by getting published in prestigious conferences and journals, to being motivated by solving real problems for real people.</p>
+<p>Halfway through my 18-year research career working on program synthesis–the task of automatically constructing a program that satisfies a given high-level specification–I had a series of epiphanies that profoundly changed the way I approach research. Yes, I had a good and rising publication list, h-index, and awards. Yes, I had a nice car and could take the occasional exotic vacation. Yet, the meaning, the legacy, and the sense of purpose were missing.</p>
+<p>On a flight home from a prestigious conference, I sat next to a woman who asked me to help her with an Excel problem, which I sheepishly admit that I was unable to solve. However, that moment opened up a door for me: would it be possible to apply artificial intelligence to help people avoid simple repetitive tasks? Could I approach research from a different value system than the one that academia had trained me to? This encounter propelled me to develop a research approach that I call the Four Big Bets. I call them “bets” because I had to make a leap of faith and invest in a different way of doing things to make these changes. As a result of them, my value system and my daily work are more aligned, and I believe I’m a much better researcher as a result. I’m also playing the role of bellwether for shifts in research philosophy at Microsoft; from pure research, to research that is focused on eventual productization, filling the gap between basic and applied research.</p>
+<p><strong>Big Bet One</strong></p>
+<p>The first Big Bet is one I call “customer connection.” In the past, I would find hard problems that I thought I could get published, and then I worked on those. In the new paradigm, my goal is to solve real problems that real people are experiencing. In fact, I wanted to figure out the simplest problems that would yield the biggest benefits. So inspired by the woman I met on the airplane, I spent time on spreadsheet help forums and identified potential problems that program synthesis could solve. While mining those forums, I discovered a clear problem: people want to write scripts for transforming a column of data, but they don’t know how; and so they spend a lot of time asking experts for help. What if they could give an example of the output they are looking for and the tool would figure out the script automatically? That’s an ideal application for program synthesis—automating tedious repetitive tasks from examples.</p>
+<p>In program synthesis, the goal is to create a computer program based on some high-level logical or programmatic specification. This has been a consistent challenge for a long time, with some recent breakthroughs. For instance, today program synthesis technologies are being used to discover new algorithms that would take humans months to discover, or for superoptimizing code that can be faster than the human-optimized code by several factors.</p>
+<p>However, that instance is a program synthesis tool aimed at algorithm designers or performance experts. What if you don’t know how to code at all or write logical specifications? To help the 99 percent of people who want to automate their tasks and who are non-programmers, you have to start by listening to them.</p>
+<p>When I started listening, I was looking for the simplest problem I could solve by using program synthesis and that would empower the most people to achieve more. I observed that these people struggled with simple spreadsheet transformations but were able to express their intent using input-output examples. This led me to invent a programming-by-example synthesizer, now known as Flash Fill, that Excel really needed, and I wrote a research paper about solving that problem. Today, it’s my most highly read and cited article, and what CNN Money called “Excel 2013’s coolest new feature.” Pretty good for a program synthesis PhD researcher. By solving this problem, I met both of my goals: practical impact and academic impact. I became addicted to that success and started to apply that big bet — connect with customers — to other domains.</p>
+<p><strong>Big Bet Two</strong></p>
+<p>The second big bet was to develop a framework to facilitate creating such synthesizers for different task domains or application areas. Instead of creating one implementation, and then another from scratch for each new domain, I wanted to do something bigger and better: create an algorithmic framework with reusable components that provides value to all domains.</p>
+<p>The demand for program synthesis is fueled by two business needs: data wrangling, an activity where data scientists spend 80 percent of their time to bring raw data into a structured form, and code refactoring, an activity where application migration developers spend 40 percent of their time. Both of these numbers would come way down if we could develop example-based synthesizers for the various domains of repetitive tasks that arise in these application areas. These, in turn, can be facilitated by a general-purpose synthesis framework that would make it easy to create synthesizers for specific domains.</p>
+<p>To develop such a framework, we had to modularize and generalize the key ideas behind the various domain-specific program synthesizers that we had already developed. We made multiple attempts, many of which failed, but some of which took us slowly and steadily to the ultimate insight that lay hidden behind all our synthesizers—which turned out to be a simple and powerful theory of inverse computations to guide the search backwards from input-output examples to programs. This framework has since served as the foundation for designing and developing new domain-specific synthesis algorithms and implementations, yielding an order-of-magnitude improvement in our effectiveness to provide solutions for different verticals.</p>
+<p>I want to point out that this approach to research takes a village. It takes interns, engineers, researchers and funders. Every time you re-implement an algorithm to a more general version, it takes time, money and skills. To make it production-ready requires even more effort, as I learned with the Excel team.</p>
+<p><strong>Big Bet Three</strong></p>
+<p>Everything works better when research and engineering skills come together as part of one team committed to a single mission. Part of this learning came from my two years working with the Excel team to implement Flash Fill. Brilliant researchers without engineering skills may create one implementation; a lesser researcher with more engineering skills can try out multiple implementations in the same time, perhaps achieving a better result. Research is about embracing uncertainty: discovering new ideas in the short run, and creating generalized frameworks in the long run. Engineering is about removing uncertainty: creating customer focus in the short run, and adopting good software engineering in the long run. These somewhat opposing values, when put together, lead to faster innovation.</p>
+<p>The other part of this learning happened from my years of experience leading multiple disconnected projects, each with a flux of contributors, creating high ramp-up costs for new participants. But when these researchers and engineers come together as part of one team committed to a single mission, the resulting continuity and synergy between different sub-projects leads to big innovation.</p>
+<p>This Big Bet gets implemented by splitting a long-term blue-sky research vision into short-term mission-focused deliverables that would generate differentiated and distinguished business value. Some people might look at that approach and say, “then you’re not a researcher; you’re running a product team.” In my world view, I’m running a strong research team that knows how to engineer robust implementations of our creative research ideas, leading to faster and bigger impact. I can also often receive funding from product groups, so that people doing more basic research can stretch their funding further. The equation of engineers plus researchers as part of a single team, equals a better work equation, leads me to my final big bet.</p>
+<p><strong>Big Bet Four</strong></p>
+<p>Cross-disciplinary research. It’s hard. Let’s look at the disciplines of machine learning and program reasoning as an instance, both of which have investigated the problem of learning programs. It’s difficult to explain to the other community that you have done something important; so in my old research paradigm, I would either ignore the other discipline or hold it in awe. The middle way is to appropriately combine the techniques from both the program reasoning and the machine learning communities. It takes working with empathetic experts that are willing to explain things and partner with you; but when it works, it’s amazing. The program synthesis problem involves search, ranking and disambiguation. Program reasoning techniques can provide a structure to the search (via grammar rules and back-propagating the example-based specification over those rules using inverse semantics of grammar operators) to generate multiple candidate programs and then drive an active learning session with the user to resolve ambiguities. Machine learning techniques, on the other hand, can speed up search by learning to order the non-deterministic choices (over grammar rules and over sub-goals produced by backpropagation), and make active learning more effective by learning to rank the candidate programs. Together, these two disciplines can solve the program synthesis problem faster and more completely than either one can by itself. More generally, there is a big opportunity to combine machine learning and traditional software development by using machine learning to learn the various heuristics that are today manually programmed in AI systems (and not just our program synthesizers). Such heuristic automation not only produces better heuristics, but can also lead to software systems that are personalizable and adaptive.</p>
+<p><strong>New Challenges</strong></p>
+<p>Now, this approach to research has its own set of challenges. For example, the data that we have gathered through our customer connection is so identifiable that we cannot release it in its current form as part of a challenge benchmark. We have to apply anonymization and remove personally identifiable information.</p>
+<p>Our framework-based approach requires us to find the right balance between generalization and specialization. With a fixed amount of resourcing, one can either develop a more intelligent specialized solution or a less intelligent but more generally applicable solution. That’s an interesting needle to thread.</p>
+<p>Our commitment to combined research and engineering requires us to deal with the challenge of delivering an end-to-end solution that has the right user experience baked in. Similarly, in doing cross-disciplinary research, we have to find the right balance between quick-turn experiments versus production-ready implementation.</p>
+<p>I know that this approach accelerates discoveries and innovation. There is no doubt a ramp-up cost in adopting these value systems, but once the structure is in place — the customer relevance, the framework, the engineering, and the cross-pollination of research ideas — it will provide a boost to our ultimate mission of advancing science and delivering value. Today our program synthesis investment has advanced to a point where, for instance, we can enable a non-programmer to perform a data wrangling task in 30 seconds that would otherwise take a programmer 30 minutes of coding.</p>
+<p>To summarize, in the second half of my 18-year-long research career, I imbibed a different research style, which yielded much more personal satisfaction. The common elixir behind all my uplifting transitions was that of connection—not just between ideas, but with people. My stories of change have pivoted around developing an empathetic connection with customers, researchers from my area, the engineering world, and researchers from other areas. I hope that this frame may be useful for research management and funding agencies to facilitate such connections. I also hope that budding researchers may find this frame useful to make conscious choices about the “what” and “how” of their research.</p>
+    </div>
+    <div class="post-footer">
+      <a href="https://gaoxiang9430.github.io/post" class="btn btn-primary btn-block btn-lg">View All 27 Articles →</a>
+
+    </div>
+    
+		
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
+
+</div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <footer>
+<div style="filter:alpha(opacity=60);-moz-opacity:0.5;opacity:0.5; -khtml-opacity: 0.5;">
+	<div>
+		<div style="float:left; text-align:left"><font size="2" color="Black" face="Arial">Built with <a href="http://gohugo.io/">Hugo</a> (0.72.0)</font></div>
+		<div style="float:right; text-align:right"><font size="2" color="Black" face="Arial">Gao Xiang</font></div>
+	</div></br>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://gaoxiang9430.github.io/javascripts/shiori.js"></script>
+    
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </body>
+</html>
+

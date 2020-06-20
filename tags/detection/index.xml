@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>detection on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/detection/</link>
+    <description>Recent content in detection on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Nov 2016 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/detection/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Semantics-Aware Android Malware Classification USing Weighted Contextual API Dependency Graph</title>
+      <link>https://gaoxiang9430.github.io/post/semantics-aware-android-malware-classification-using-weighted-contextual-api-dependency-graphs/</link>
+      <pubDate>Wed, 16 Nov 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/semantics-aware-android-malware-classification-using-weighted-contextual-api-dependency-graphs/</guid>
+      <description>Existing automated Android malware detection and classification can be divided into two general catageries: signature-based and machine learning-based. The former one can be easily evaded by bytecode-level transformation attacks. And prior learning-based works extract features from application syntax instead of program semantics, which are also subject to evasion. So this paper proposed a method to extract a weighted contextual API dependency graph similarity metrics to uncover homogeneous application behaviors.</description>
+    </item>
+    
+    <item>
+      <title>AppIntent: Analyzing sensitive data transmission in Android for privacy leakage detection</title>
+      <link>https://gaoxiang9430.github.io/post/appintent_privacy-leakage-detection/</link>
+      <pubDate>Thu, 29 Sep 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/appintent_privacy-leakage-detection/</guid>
+      <description>Android phones carry much personal information, attracting malicious developers to embed code in Android applications to steal sensitive data. Transmission of sensitive data in itself does not indicate privacy leakage, a better indicator may be whether the transmission is by user intention or not. When transmission is not user-intended, it is more likely a privacy leakage. AppIntent first apply static analysis to the target app to identify the possible execution under analysis.</description>
+    </item>
+    
+    <item>
+      <title>AppContext: Differentiating Malicious and Benign Mobile App Behaviors Using Context</title>
+      <link>https://gaoxiang9430.github.io/post/icse15_appcontext/</link>
+      <pubDate>Sat, 24 Sep 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/icse15_appcontext/</guid>
+      <description>Mobile malware attempts to evade detection during app analysis by mimicking security-sensitive behaviors of benigh apps that provide similar functionality, making it much more difficult to detect. This paper propose that the malicious and benign behaviors within apps can be differentialted based on the context that trigger security sensitive behaviors, ie., the event and conditions that cause the security-sensitive behaviors to occur. And they introduced AppContext, an approch of static program analysis that extracts the contexts of security-sensitive behaviors to assist app analysis.</description>
+    </item>
+    
+  </channel>
+</rss>

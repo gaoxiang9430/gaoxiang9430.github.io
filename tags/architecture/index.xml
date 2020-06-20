@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/architecture/</link>
+    <description>Recent content in Architecture on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jan 2017 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Security Design and Architecture</title>
+      <link>https://gaoxiang9430.github.io/post/android-security-design-and-architecture/</link>
+      <pubDate>Mon, 02 Jan 2017 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/android-security-design-and-architecture/</guid>
+      <description>The android architecture consists of five main layers, including Android application, Android Framework, Dalvik virtual machine, user-space native code and Linux kernel. The first two layers are developed in java, and executed in Dalvik virtual machine(DVM). DVM is a register-based VM that interprets the Dalvik Executable(DEX) byte code format. In turn, DVM relies on the functionalities provided by a number of supporting native code libraries. The user-space native code components include system services such as DBus, networking services such as dhcpd, supporting libraries such as WebKit and OpenSSL.</description>
+    </item>
+    
+  </channel>
+</rss>

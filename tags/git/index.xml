@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/git/</link>
+    <description>Recent content in git on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 May 2016 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git学习记录</title>
+      <link>https://gaoxiang9430.github.io/post/git%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Wed, 11 May 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/git%E5%AD%A6%E4%B9%A0/</guid>
+      <description>Git是目前世界上最先进的分布式版本控制系统（没有之一）。在linux系统发展之初，世界各地的志愿者把代码通过diff的方式发给linus，然后由linus通过手工的方式进行整合，这种方式效率低，且易发生错误。当时世界上有些免费的版本控制系统（CSV，SVN），但是这些系统是集中式的，且必须联网才能使用。后来linus花了两周时间用c写了一个分布式的版本管理系统，这就是Git。 Git与其他分布式系统的区别主要是他为分布式的。在传统的集中式版本控制系统中，版本库存放于中央服务器，在修改代码的时候首先从服务器下载最新版本。干完活之后在推送给服务器，因此这个过程需要联网的支持。可是当网络不好的时候，就会导致工作效率很差。在分布式的版本系统中，没有所谓的中央服务器，每个人的电脑上有个完整的版本库，这样就可以在不联网的状态下工作了。在多人协作的时候，每个人将自己修改的代码推送给所有的团队成员。当然为了管理的方便，也可以设置一个服务器，用于方便团队成员交换意见。在分布式管理的模式下也可以避免服务器的崩溃而导致所有文件的丢失，增加了系统的健壮性。
+ git的安装 可以通过sudo apt-get install git直接安装，也可以下载源码，然后./config, make, sudo make install来执行安装。安装完成后通过
+$ git config --global user.name &amp;quot;Your Name&amp;quot; $ git config --global user.email &amp;quot;email@example.com&amp;quot; 来对其进行设置。这表示这台机器上的所有仓库都会使用这个设置。
+ 创建版本库 创建一个目录，然后git init就会在该目录下创建一个.git文件，用来跟踪和管理版本库。在创建版本库之后就可以向该版本库中添加文件了， git add (file or directory) #将新文件添加到stage（暂存区）中 git commit -m &amp;quot;here is commit information&amp;quot; #将stage中的文件提交到版本库。 git status 查看当前版本库的状态，是否有修改后未提交的文件 git log 查看提交历史 git reset --hard (commit id) 回退到之前的版本 git rm test.txt ; git commit -m &amp;quot;rm file&amp;quot;从git版本库中删除文件
+ git远程仓库 我们可以首先在github上注册一个帐号，由github来充当项目服务器的角色，不过github上的代码都是公开的。为了防止他人想你的github胡乱提交，你首先需要在github中加入你自己的ssh公钥。公钥的生成方式： ssh-keygen -t rsa -C &amp;ldquo;youremail@example.</description>
+    </item>
+    
+  </channel>
+</rss>

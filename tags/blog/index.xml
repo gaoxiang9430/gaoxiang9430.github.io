@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/blog/</link>
+    <description>Recent content in blog on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Mar 2017 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Model-based Whitebox Fuzzing</title>
+      <link>https://gaoxiang9430.github.io/post/model-based-whitebox-fuzzing/</link>
+      <pubDate>Fri, 03 Mar 2017 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/model-based-whitebox-fuzzing/</guid>
+      <description>Many real-world programs take highly structured and complex files as inputs. The automated testing of those programs is non-trivial. Traditional writebox test based on fuzzing or symbolic excution may produce inputs which do not satisfy file format. And blackbox test based on fuzzing can not reach the crash location quickly. Model-based Whitebox Fuzzing(MoWF) combine model-based blackbox fuzzing and the writebox fuzzing that generates valid files efficiently that exercise critical target lications effectively.</description>
+    </item>
+    
+    <item>
+      <title>Android Security Design and Architecture</title>
+      <link>https://gaoxiang9430.github.io/post/android-security-design-and-architecture/</link>
+      <pubDate>Mon, 02 Jan 2017 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/android-security-design-and-architecture/</guid>
+      <description>The android architecture consists of five main layers, including Android application, Android Framework, Dalvik virtual machine, user-space native code and Linux kernel. The first two layers are developed in java, and executed in Dalvik virtual machine(DVM). DVM is a register-based VM that interprets the Dalvik Executable(DEX) byte code format. In turn, DVM relies on the functionalities provided by a number of supporting native code libraries. The user-space native code components include system services such as DBus, networking services such as dhcpd, supporting libraries such as WebKit and OpenSSL.</description>
+    </item>
+    
+    <item>
+      <title>Precise Interprocedural DataFlow Analysis Via Graph Reachability</title>
+      <link>https://gaoxiang9430.github.io/post/precise-interprocedural-dataflow-analysis-via-graph-reachabilit/</link>
+      <pubDate>Sat, 24 Dec 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/precise-interprocedural-dataflow-analysis-via-graph-reachabilit/</guid>
+      <description>Data flow analysis can be used to find the data dependency between different functions, statements and variables. For current programming language, data flow analysis is a very complex problem. In the 1990s, there are some reseaches proposed some good ideas to deal with this problem. Thomas[1] etc proposed to transform dataflow-analysis into a graph-reachability problem. In this paper, they defined a IFDS problem(interprocedural, finite, distributive, subset).
+ Super Graph In the IFDS problem, the program is represented using a directed graph called super graph.</description>
+    </item>
+    
+    <item>
+      <title>Android Fuzzing</title>
+      <link>https://gaoxiang9430.github.io/post/fuzzing/</link>
+      <pubDate>Thu, 22 Dec 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/fuzzing/</guid>
+      <description>Fuzz tesing is a method for testing software input validation by feeding it intentionally malformed input. Due to its simpleness and automated nature, fuzz attracted many researches to develop a fuzzer. Meanwhile,fuzz testing is not without drawbacks, the performance is the biggest problem. In order to fuzz a target application, the follow 4 steps should be accomplished:
+1. Identifing the target2. Generating input3. Test-case delivery4. Crash monitoring  Identifying Target Identifying a target is the first step to craft an effective fuzzer.</description>
+    </item>
+    
+    <item>
+      <title>Semantics-Aware Android Malware Classification USing Weighted Contextual API Dependency Graph</title>
+      <link>https://gaoxiang9430.github.io/post/semantics-aware-android-malware-classification-using-weighted-contextual-api-dependency-graphs/</link>
+      <pubDate>Wed, 16 Nov 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/semantics-aware-android-malware-classification-using-weighted-contextual-api-dependency-graphs/</guid>
+      <description>Existing automated Android malware detection and classification can be divided into two general catageries: signature-based and machine learning-based. The former one can be easily evaded by bytecode-level transformation attacks. And prior learning-based works extract features from application syntax instead of program semantics, which are also subject to evasion. So this paper proposed a method to extract a weighted contextual API dependency graph similarity metrics to uncover homogeneous application behaviors.</description>
+    </item>
+    
+    <item>
+      <title>Taint-Enhanced Policy Enforcement</title>
+      <link>https://gaoxiang9430.github.io/post/taint-enhanced-policy-enforcement/</link>
+      <pubDate>Wed, 12 Oct 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/taint-enhanced-policy-enforcement/</guid>
+      <description>Taint analysis is a very popular method for program static analysis. In taint analysis, we can mark some variables or memory region as taint, track the propagation of those datas, and find the path from source to sink. And then we can detect some malicious behaviors according to this analysis information. This paper proposed a taint-enhanced policy to detect many kinds of attacks in runtime. There is a kinds of vulnerabilities that can be trigged by well-designed input from attackers.</description>
+    </item>
+    
+    <item>
+      <title>Control Flow Integrity(First formal English Presentation)</title>
+      <link>https://gaoxiang9430.github.io/post/cfi/</link>
+      <pubDate>Thu, 06 Oct 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/cfi/</guid>
+      <description>Most external attacks aim to control software behaviors. To achieve this, those attacks want to change the software control-flow graph. For example, the buffer overflow attack, attackers can change the return address after a function call completed. And even control the software to excute the system library functions. To deal with the problem, many previous works had proposed good ideas. Such as stack canaries, this mechainism add a canary before the return address, if an attack try to change the address, it mush change the canary first.</description>
+    </item>
+    
+    <item>
+      <title>AppIntent: Analyzing sensitive data transmission in Android for privacy leakage detection</title>
+      <link>https://gaoxiang9430.github.io/post/appintent_privacy-leakage-detection/</link>
+      <pubDate>Thu, 29 Sep 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/appintent_privacy-leakage-detection/</guid>
+      <description>Android phones carry much personal information, attracting malicious developers to embed code in Android applications to steal sensitive data. Transmission of sensitive data in itself does not indicate privacy leakage, a better indicator may be whether the transmission is by user intention or not. When transmission is not user-intended, it is more likely a privacy leakage. AppIntent first apply static analysis to the target app to identify the possible execution under analysis.</description>
+    </item>
+    
+    <item>
+      <title>程序分析中的 {path,context,flow}-sensitive 问题</title>
+      <link>https://gaoxiang9430.github.io/post/%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84-pathcontextflow-sensitive-%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 28 Sep 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84-pathcontextflow-sensitive-%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;题主想要不同语言的定义，我只熟悉OO语言，所以我只解释OO程序里的概念。不过知道OO语言的之后，C的也基本能触类旁通，因为它们都是imperative语言。Functional语言的context-sensitivity我猜应该也是相通的，至于functional语言的flow-和path-sensitivity我就不知道是怎么回事了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AppContext: Differentiating Malicious and Benign Mobile App Behaviors Using Context</title>
+      <link>https://gaoxiang9430.github.io/post/icse15_appcontext/</link>
+      <pubDate>Sat, 24 Sep 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/icse15_appcontext/</guid>
+      <description>Mobile malware attempts to evade detection during app analysis by mimicking security-sensitive behaviors of benigh apps that provide similar functionality, making it much more difficult to detect. This paper propose that the malicious and benign behaviors within apps can be differentialted based on the context that trigger security sensitive behaviors, ie., the event and conditions that cause the security-sensitive behaviors to occur. And they introduced AppContext, an approch of static program analysis that extracts the contexts of security-sensitive behaviors to assist app analysis.</description>
+    </item>
+    
+    <item>
+      <title>Coverage-based Fuzzing as Markov Chain</title>
+      <link>https://gaoxiang9430.github.io/post/converage-based-greybox-fuzzing/</link>
+      <pubDate>Mon, 08 Aug 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/converage-based-greybox-fuzzing/</guid>
+      <description>This paper introduced Markov Chain into greybox Fuzzing to explore the state space of programs more systematically. The chain specifies the probability that fuzzing an input that exercises path i generates an input that exercise path j. Then, they assign each fuzzed test input an energy that controls the amount of fuzz generated at each iteration. And they find that greybox fuzzing is most efficient if the exploration focuses on the low-density region.</description>
+    </item>
+    
+    <item>
+      <title>Detecting Energy Bugs and Hotspots in Mobile Apps</title>
+      <link>https://gaoxiang9430.github.io/post/detecting-energy-bugs-and-hotspot/</link>
+      <pubDate>Sun, 07 Aug 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/detecting-energy-bugs-and-hotspot/</guid>
+      <description>Over the recent years, the popularity of smartphones has increased dramatically. As we all know, smartphone is an energy-limited device. So, it is important to develop tools and techniques that aid in energy-efficient application development. Energy inefficiencies in smartphone can broadly be categorized into energy hotspots and energy bugs. An energy hotspot can be described as a scenario where executing an application causes the smartphone to consume abnormally high amount of battery power.</description>
+    </item>
+    
+    <item>
+      <title>X86汇编语言学习</title>
+      <link>https://gaoxiang9430.github.io/post/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 26 May 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</guid>
+      <description>&lt;p&gt;X86是intel芯片的指令集，本文中描述了部分常用的x86指令．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git学习记录</title>
+      <link>https://gaoxiang9430.github.io/post/git%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Wed, 11 May 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/git%E5%AD%A6%E4%B9%A0/</guid>
+      <description>Git是目前世界上最先进的分布式版本控制系统（没有之一）。在linux系统发展之初，世界各地的志愿者把代码通过diff的方式发给linus，然后由linus通过手工的方式进行整合，这种方式效率低，且易发生错误。当时世界上有些免费的版本控制系统（CSV，SVN），但是这些系统是集中式的，且必须联网才能使用。后来linus花了两周时间用c写了一个分布式的版本管理系统，这就是Git。 Git与其他分布式系统的区别主要是他为分布式的。在传统的集中式版本控制系统中，版本库存放于中央服务器，在修改代码的时候首先从服务器下载最新版本。干完活之后在推送给服务器，因此这个过程需要联网的支持。可是当网络不好的时候，就会导致工作效率很差。在分布式的版本系统中，没有所谓的中央服务器，每个人的电脑上有个完整的版本库，这样就可以在不联网的状态下工作了。在多人协作的时候，每个人将自己修改的代码推送给所有的团队成员。当然为了管理的方便，也可以设置一个服务器，用于方便团队成员交换意见。在分布式管理的模式下也可以避免服务器的崩溃而导致所有文件的丢失，增加了系统的健壮性。
+ git的安装 可以通过sudo apt-get install git直接安装，也可以下载源码，然后./config, make, sudo make install来执行安装。安装完成后通过
+$ git config --global user.name &amp;quot;Your Name&amp;quot; $ git config --global user.email &amp;quot;email@example.com&amp;quot; 来对其进行设置。这表示这台机器上的所有仓库都会使用这个设置。
+ 创建版本库 创建一个目录，然后git init就会在该目录下创建一个.git文件，用来跟踪和管理版本库。在创建版本库之后就可以向该版本库中添加文件了， git add (file or directory) #将新文件添加到stage（暂存区）中 git commit -m &amp;quot;here is commit information&amp;quot; #将stage中的文件提交到版本库。 git status 查看当前版本库的状态，是否有修改后未提交的文件 git log 查看提交历史 git reset --hard (commit id) 回退到之前的版本 git rm test.txt ; git commit -m &amp;quot;rm file&amp;quot;从git版本库中删除文件
+ git远程仓库 我们可以首先在github上注册一个帐号，由github来充当项目服务器的角色，不过github上的代码都是公开的。为了防止他人想你的github胡乱提交，你首先需要在github中加入你自己的ssh公钥。公钥的生成方式： ssh-keygen -t rsa -C &amp;ldquo;youremail@example.</description>
+    </item>
+    
+  </channel>
+</rss>

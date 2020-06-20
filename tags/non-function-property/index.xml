@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Non-function property on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/non-function-property/</link>
+    <description>Recent content in Non-function property on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Aug 2016 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/non-function-property/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Detecting Energy Bugs and Hotspots in Mobile Apps</title>
+      <link>https://gaoxiang9430.github.io/post/detecting-energy-bugs-and-hotspot/</link>
+      <pubDate>Sun, 07 Aug 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/detecting-energy-bugs-and-hotspot/</guid>
+      <description>Over the recent years, the popularity of smartphones has increased dramatically. As we all know, smartphone is an energy-limited device. So, it is important to develop tools and techniques that aid in energy-efficient application development. Energy inefficiencies in smartphone can broadly be categorized into energy hotspots and energy bugs. An energy hotspot can be described as a scenario where executing an application causes the smartphone to consume abnormally high amount of battery power.</description>
+    </item>
+    
+  </channel>
+</rss>

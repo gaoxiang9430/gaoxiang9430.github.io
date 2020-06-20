@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://gaoxiang9430.github.io/stylesheets/shiori.css">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gaoxiang9430.github.io/res/favicon.ico">
+    <title>Xiang</title>
+    <style> 
+		.divcss5{text-align:center} 
+		.navbar{
+    		background:rgba(0,0,0,0);
+		}
+	</style> 
+    
+    
+
+  </head>
+  <body>
+    <div style="background-image:url(https://gaoxiang9430.github.io/res/background.jpg);width:background-size:100% auto;height:280px;background-repeat:repeat;">
+		<div class="navbar navbar-default navbar-static-top">
+		  <div class="container-fluid">
+		    <div>
+		        <div class="collapse navbar-collapse js-navbar-collapse">
+		          <ul class="navbar-nav nav navbar-right">
+		            
+<li><a href="https://gaoxiang9430.github.io/"><font size="2" color="Black" face="Arial"> HOME</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/post"><font size="2" color="Black" face="Arial"> BLOG</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/rhesis"><font size="2" color="Black" face="Arial"> CATCH</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/tags"><font size="2" color="Black" face="Arial"> TAGS</font></a></li>
+<li><a href="https://gaoxiang9430.github.io/about"><font size="2" color="Black" face="Arial"> ABOUT</font></a></li>
+
+		          </ul>
+		        </div>
+		    </div>
+		  </div>
+		  <div class=divcss5>
+		  	<font size="7" color="#292421">Xiang's Blog</font><br>
+		  	<font size="5" color="#393431"><p style="font-family:STXingkai"><b>但行好事，莫问前程</b></p></font>
+		  	<br><br>
+		  </div>
+		</div>
+    </div>
+    
+    <div class="container">
+    <hr />
+
+<div class="row">
+  <div class="col-sm-10">
+    <div class="post-header">
+      <h1 class="post-title-main">Control Flow Integrity(First formal English Presentation)</h1>
+      <p class="text-muted">Oct 6, 2016</p>
+
+    </div>
+    <div class="post-content">
+      <p>Most external attacks aim to control software behaviors. To achieve this, those attacks want to change the software control-flow graph. For example, the buffer overflow attack, attackers can change the return address after a function call completed. And even control the software to excute the system library functions.
+To deal with the problem, many previous works had proposed good ideas. Such as stack canaries, this mechainism add a canary before the return address, if an attack try to change the address, it mush change the canary first. In this situation, system can detect this the malicious behavior. However, attackers can bypass the protections by hooking the canary checking function. And for other protection mechainisms, attckers can bypass them, too.</p>
+<hr>
+<h5 id="cfi-">CFI</h5>
+<p>This paper proposed Control-Flow Integrity(CFI). CFI enforces software execution must follow a path of a Control-Flow Graph(CFG) determined ahead of time. For example, after a function call, it must return to the caller, which prevent the program from jumping to library function even though the return address modified by the attackers. The most important part in this process is to pre-determine the CFG. This paper provided 3 method</p>
+<pre><code>1. static source code analysis
+2. static binary code analysis
+3. execution profiling
+</code></pre>
+<p>Before we start to introduce the CFI details, we first give the assumptions.</p>
+<pre><code>1. UWC Non-Writeable Code :  NWC is already true on most current systems, except during the loading of dynamic libraries and runtime code-generation
+2. NXD Non-Executable Data : NXD is supported in hardware on the latest x86 processors
+3. UNQ Unique IDs : After CFI instrumentation, the bit patterns chosen as IDs must not be present anywhere in the code memory except in IDs and ID-checks.
+</code></pre>
+<p>The first step for CFI enforcement is to construct the control flow graph. We can build CFG from source code or binary code using some standard control flow analysis tools. When building the control flow graph, we must ensure that the program is executed in a security enviornment.
+The second step is to label each control flow operation.
+The third step is to insert IDs and ID-checks to binary code.</p>
+<hr>
+<h5 id="cfi-measurement-">CFI measurement</h5>
+<p>Each binary takes about 10 seconds, with the size of the binary increasing by an average 8%.
+Takes 16% longer time to execute, on average. Because the IDs and ID-checks have the same locality properties as executing code, they are not penalized by the high memory latency.On the other hand, in almost cases, the eax and ecx registers can be used directly at function calls and returns.</p>
+
+    </div>
+    <div class="post-footer">
+      <a href="https://gaoxiang9430.github.io/post" class="btn btn-primary btn-block btn-lg">View All 27 Articles →</a>
+
+    </div>
+    
+		
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
+
+</div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <footer>
+<div style="filter:alpha(opacity=60);-moz-opacity:0.5;opacity:0.5; -khtml-opacity: 0.5;">
+	<div>
+		<div style="float:left; text-align:left"><font size="2" color="Black" face="Arial">Built with <a href="http://gohugo.io/">Hugo</a> (0.72.0)</font></div>
+		<div style="float:right; text-align:right"><font size="2" color="Black" face="Arial">Gao Xiang</font></div>
+	</div></br>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://gaoxiang9430.github.io/javascripts/shiori.js"></script>
+    
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CFI on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/cfi/</link>
+    <description>Recent content in CFI on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Oct 2016 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/cfi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Control Flow Integrity(First formal English Presentation)</title>
+      <link>https://gaoxiang9430.github.io/post/cfi/</link>
+      <pubDate>Thu, 06 Oct 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/cfi/</guid>
+      <description>Most external attacks aim to control software behaviors. To achieve this, those attacks want to change the software control-flow graph. For example, the buffer overflow attack, attackers can change the return address after a function call completed. And even control the software to excute the system library functions. To deal with the problem, many previous works had proposed good ideas. Such as stack canaries, this mechainism add a canary before the return address, if an attack try to change the address, it mush change the canary first.</description>
+    </item>
+    
+  </channel>
+</rss>

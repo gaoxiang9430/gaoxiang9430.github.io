@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/android/</link>
+    <description>Recent content in Android on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jan 2017 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Security Design and Architecture</title>
+      <link>https://gaoxiang9430.github.io/post/android-security-design-and-architecture/</link>
+      <pubDate>Mon, 02 Jan 2017 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/android-security-design-and-architecture/</guid>
+      <description>The android architecture consists of five main layers, including Android application, Android Framework, Dalvik virtual machine, user-space native code and Linux kernel. The first two layers are developed in java, and executed in Dalvik virtual machine(DVM). DVM is a register-based VM that interprets the Dalvik Executable(DEX) byte code format. In turn, DVM relies on the functionalities provided by a number of supporting native code libraries. The user-space native code components include system services such as DBus, networking services such as dhcpd, supporting libraries such as WebKit and OpenSSL.</description>
+    </item>
+    
+    <item>
+      <title>Precise Interprocedural DataFlow Analysis Via Graph Reachability</title>
+      <link>https://gaoxiang9430.github.io/post/precise-interprocedural-dataflow-analysis-via-graph-reachabilit/</link>
+      <pubDate>Sat, 24 Dec 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/precise-interprocedural-dataflow-analysis-via-graph-reachabilit/</guid>
+      <description>Data flow analysis can be used to find the data dependency between different functions, statements and variables. For current programming language, data flow analysis is a very complex problem. In the 1990s, there are some reseaches proposed some good ideas to deal with this problem. Thomas[1] etc proposed to transform dataflow-analysis into a graph-reachability problem. In this paper, they defined a IFDS problem(interprocedural, finite, distributive, subset).
+ Super Graph In the IFDS problem, the program is represented using a directed graph called super graph.</description>
+    </item>
+    
+    <item>
+      <title>Android Fuzzing</title>
+      <link>https://gaoxiang9430.github.io/post/fuzzing/</link>
+      <pubDate>Thu, 22 Dec 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/fuzzing/</guid>
+      <description>Fuzz tesing is a method for testing software input validation by feeding it intentionally malformed input. Due to its simpleness and automated nature, fuzz attracted many researches to develop a fuzzer. Meanwhile,fuzz testing is not without drawbacks, the performance is the biggest problem. In order to fuzz a target application, the follow 4 steps should be accomplished:
+1. Identifing the target2. Generating input3. Test-case delivery4. Crash monitoring  Identifying Target Identifying a target is the first step to craft an effective fuzzer.</description>
+    </item>
+    
+    <item>
+      <title>Semantics-Aware Android Malware Classification USing Weighted Contextual API Dependency Graph</title>
+      <link>https://gaoxiang9430.github.io/post/semantics-aware-android-malware-classification-using-weighted-contextual-api-dependency-graphs/</link>
+      <pubDate>Wed, 16 Nov 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/semantics-aware-android-malware-classification-using-weighted-contextual-api-dependency-graphs/</guid>
+      <description>Existing automated Android malware detection and classification can be divided into two general catageries: signature-based and machine learning-based. The former one can be easily evaded by bytecode-level transformation attacks. And prior learning-based works extract features from application syntax instead of program semantics, which are also subject to evasion. So this paper proposed a method to extract a weighted contextual API dependency graph similarity metrics to uncover homogeneous application behaviors.</description>
+    </item>
+    
+    <item>
+      <title>Taint-Enhanced Policy Enforcement</title>
+      <link>https://gaoxiang9430.github.io/post/taint-enhanced-policy-enforcement/</link>
+      <pubDate>Wed, 12 Oct 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/taint-enhanced-policy-enforcement/</guid>
+      <description>Taint analysis is a very popular method for program static analysis. In taint analysis, we can mark some variables or memory region as taint, track the propagation of those datas, and find the path from source to sink. And then we can detect some malicious behaviors according to this analysis information. This paper proposed a taint-enhanced policy to detect many kinds of attacks in runtime. There is a kinds of vulnerabilities that can be trigged by well-designed input from attackers.</description>
+    </item>
+    
+    <item>
+      <title>AppIntent: Analyzing sensitive data transmission in Android for privacy leakage detection</title>
+      <link>https://gaoxiang9430.github.io/post/appintent_privacy-leakage-detection/</link>
+      <pubDate>Thu, 29 Sep 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/appintent_privacy-leakage-detection/</guid>
+      <description>Android phones carry much personal information, attracting malicious developers to embed code in Android applications to steal sensitive data. Transmission of sensitive data in itself does not indicate privacy leakage, a better indicator may be whether the transmission is by user intention or not. When transmission is not user-intended, it is more likely a privacy leakage. AppIntent first apply static analysis to the target app to identify the possible execution under analysis.</description>
+    </item>
+    
+    <item>
+      <title>AppContext: Differentiating Malicious and Benign Mobile App Behaviors Using Context</title>
+      <link>https://gaoxiang9430.github.io/post/icse15_appcontext/</link>
+      <pubDate>Sat, 24 Sep 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/icse15_appcontext/</guid>
+      <description>Mobile malware attempts to evade detection during app analysis by mimicking security-sensitive behaviors of benigh apps that provide similar functionality, making it much more difficult to detect. This paper propose that the malicious and benign behaviors within apps can be differentialted based on the context that trigger security sensitive behaviors, ie., the event and conditions that cause the security-sensitive behaviors to occur. And they introduced AppContext, an approch of static program analysis that extracts the contexts of security-sensitive behaviors to assist app analysis.</description>
+    </item>
+    
+    <item>
+      <title>Detecting Energy Bugs and Hotspots in Mobile Apps</title>
+      <link>https://gaoxiang9430.github.io/post/detecting-energy-bugs-and-hotspot/</link>
+      <pubDate>Sun, 07 Aug 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/detecting-energy-bugs-and-hotspot/</guid>
+      <description>Over the recent years, the popularity of smartphones has increased dramatically. As we all know, smartphone is an energy-limited device. So, it is important to develop tools and techniques that aid in energy-efficient application development. Energy inefficiencies in smartphone can broadly be categorized into energy hotspots and energy bugs. An energy hotspot can be described as a scenario where executing an application causes the smartphone to consume abnormally high amount of battery power.</description>
+    </item>
+    
+  </channel>
+</rss>

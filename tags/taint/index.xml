@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Taint on Xiang</title>
+    <link>https://gaoxiang9430.github.io/tags/taint/</link>
+    <description>Recent content in Taint on Xiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Oct 2016 21:45:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://gaoxiang9430.github.io/tags/taint/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Taint-Enhanced Policy Enforcement</title>
+      <link>https://gaoxiang9430.github.io/post/taint-enhanced-policy-enforcement/</link>
+      <pubDate>Wed, 12 Oct 2016 21:45:10 +0800</pubDate>
+      
+      <guid>https://gaoxiang9430.github.io/post/taint-enhanced-policy-enforcement/</guid>
+      <description>Taint analysis is a very popular method for program static analysis. In taint analysis, we can mark some variables or memory region as taint, track the propagation of those datas, and find the path from source to sink. And then we can detect some malicious behaviors according to this analysis information. This paper proposed a taint-enhanced policy to detect many kinds of attacks in runtime. There is a kinds of vulnerabilities that can be trigged by well-designed input from attackers.</description>
+    </item>
+    
+  </channel>
+</rss>
