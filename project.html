@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Xiang Gao</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">Xiang Gao</a>
+      </div>
+      <div class="collapse navbar-collapse offcanvas-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right mr-auto">
+          <li class=""><a href="./index.html">Home</a></li>
+          <li class=""><a href="./pubs.html" title="publication">Publication</a></li>
+          <li class="active"><a href="#" title="project">Project</a></li>
+          <li class=""><a href="./experience.html" title="Experience">Experience</a></li>
+          <li class=""><a href="./service.html" title="service">Service</a></li>
+          <li class=""><a href="talks.html" title="award">Talks</a></li>
+          <li class=""><a href="./CV.pdf" title="blog">CV</a></li>
+        </ul>
+      </div>      
+    </div>
+  </nav>
+
+
+  <div class="page">
+    <container>
+      <p class="header">Research Projects</p>
+      <div class="panel-group">
+        <div class="panel panel-success">
+          <div class="panel-heading"><h4>Automated Program Patch Generation</h4></div>
+          <div class="panel-body">
+            <img class="img-resonsive pull-right" src="images/repair.png" width="260">
+            <p>As every developer knows, maintaining software and fixing software bugs are difficult and extremely time-consuming. Researchers have proposed automated patch generation techniques to help developers fix software bugs. However, it is very hard to ensure automatically generated patches reflect the intent of developers. This project aims to effciently generate high-quality program patches.</p>
+
+            <p><a href="https://github.com/gaoxiang9430/fix2fit"><strong>Fix2Fit</strong></a> is a technique that generate patches by combining test generation and patch generation. Existing repair techniques take a test suite as correctness criterion, which may lead to overfitting patches, where the patched programs pass given tests bug still fail on tests outside them. Fix2Fit alleviates the overfitting problem via a intelligent test generation to filter out overfitting patches. Fix2Fit provides greater confidence about the correctness of our suggested patches.</p>
+
+            <p><a href="https://extractfix.github.io"><strong>ExtractFix</strong></a> present a repair method which fixes program vulnerabilities based on semantic reasoning. Given a vulnerability as evidenced by an exploit, ExtractFix extracts a constraint representing the vulnerability. The extracted constraint then serves as a proof obligation which our synthesized patch should satisfy. Semantic reasoning in terms of the extracted constraint ensures generated patches completely fix the vulnerabilities.</p>
+
+            <p><a href="./papers/F1X.pdf"><strong>F1X</strong></a> presents a repair method which fixes program bugs efficiently. In its core, F1X proposes a partition-based exploration strategies to efficiently explore the candidate search space. F1X generates more repairs and finds repairs faster compared with state-of-the-art techniques.</p>
+
+          </div>
+        </div>
+
+        <div class="panel panel-warning">
+          <div class="panel-heading"><h4>Program Synthesis for Program Transformation</h5></div>
+          <div class="panel-body">
+            <img class="img-resonsive pull-right" src="images/synthesis.png" width="260">
+            <p>During program development or maintainance, developers usually perform some repetative code edits, such as boilerplate code edits (e.g., equality comparisons or constructors), code refactorings (e.g., rename class, extract method), and quick fixes (e.g., fix possible NullReferenceException). To automate these edits, tool builders implement code transformations that manipulate the Abstract Syntax Tree (AST) of the user’s code to produce the desired code edit. The aim of this project is to automatically synthesize high-quality program transformation rules using examples of code edits.</p>
+
+            <p><strong><a href="https://www.microsoft.com/en-us/research/project/modeless-program-synthesis/">Semi-supervised synthesis</a></strong> is a technique that can automatically synthesize high-quality program transformation rules. Different from traditional techniques that synthesis rule from concrete edits that are instances of the general transformation, our approach also exploits access to additional inputs (program subtrees) that are marked as positive or negative depending on whether the transformation applies on those inputs. This feature enables us to be vastly more effective in successfully predicting edits with significantly lesser amounts of past edit data.</p>
+
+            <p><a href="https://github.com/rshariffdeen/fixmorph"><strong>FixMorph</strong></a> is a technique that performs automated patch backporting in Linux. The Linux Kernel developers often fix Kernel bugs by introducing a patch into the mainline version of the Linux kernel source tree. However, the patch should also be “backported” to one or more of these older kernel versions. FixMorph synthesizes a transformation rule according to the patch from the mainline version and automatically backports the patch to old stable version by applying the learned rules. </p>
+          </div>
+        </div>
+
+        <div class="panel panel-info">
+          <div class="panel-heading"><h4>Scalable Binary Rewriting</h4></div>
+          <div class="panel-body">
+            <img class="img-resonsive pull-right" src="images/binary.png" width="260">
+            <p>Static binary rewriting has numerous applications in software security and systems—such as hardening, repair, patching, instrumentation and debugging. Over the decades, many different static binary rewriting tools have been proposed. However, existing techniquest are known to be fragile and tends not to scale in practice. For example, most them cannot handle very large/complex programs such as web browsers. This project aims to design and develop scalable binary rewriting tools.</p>
+            <p><a href="https://github.com/GJDuck/e9patch"><strong>E9Patch</strong></a> is a powerful static binary rewriting technique for x86_64 Linux ELF binaries. E9Patch is scalable, compatible, fast, low-overheads and programmable. Technically, E9Patch instruments instructions by inserting jumps to trampolines without the need to move other instructions. E9Patch develops a suite of binary rewriting methodologies, such as instruction punning and eviction. It can scale to very large (>100MB) stripped binaries including web browsers such as Google Chrome and FireFox.</p>
+            <p><a href="https://github.com/GJDuck/e9afl"><strong>E9AFL</strong></a> is a technique that inserts American Fuzzy Lop (AFL) instrumentation into x86_64 Linux binaries. This allows binaries to be fuzzed without the need for recompilation. E9AFL is built on top of E9Patch. It outperforms existing solutions for binary fuzzing, notably the emulation mode of AFL using QEMU, where E9AFL achieves higher speed and hence higher coverage within a time budget.</p>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4>Robustness of Deep Neural Network</h4></div>
+          <div class="panel-body">
+            <img class="img-resonsive pull-right" src="images/dnn.png" width="160">
+            <p>Deep neural networks (DNN) have been shown to be notoriously brittle to small perturbations in their input data. This problem is mainly caused by the overfitting problem. Besides the standard generalization, over-fitting in machine learning systems also impacts robust generalization, where the model show high accuracy on both training and testing sets, but cannot be generalized to inputs that are small perturbations of training/testing inputs; these small perturbations may still constitute legal inputs, but the learned model mis-classifies such inputs. Robust generalization renders the learned models resilient against such small perturbations. This project aims to improve the robust generalization of Deep Neural Network from the perspective of software engineering.</p>
+
+            <p><a href="https://github.com/gaoxiang9430/sensei"><strong>Sensei</strong></a> is a technique that re-purposes software testing methods, specifically mutation-based fuzzing, to augment the training data of DNNs, with the objective of enhancing their robustness. Sensei casts the DNN data augmentation problem as an optimization problem. It uses genetic search to generate the most suitable variant of an input data to use for training the DNN. Sensei improves the robust accuracy of the DNN, compared to the state of the art, by upto 11.9% and 5.5% on average.</p>
+          </div>
+        </div>
+      </div>
+    </container>
+  </div>
+  <br><br>
+</body>
+
+</html>
