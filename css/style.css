@@ -14,23 +14,23 @@ div.page {
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12pt;
+  font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+  font-size: 13pt;
 }
 
 p.a {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12 pt;
+  font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+  font-size: 13 pt;
   margin-left: 30px;
 }
 
 p.header {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
   font-size: 18pt;
   color:blue;
 }
 
 li {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12pt;
+  font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+  font-size: 13pt;
 }
