@@ -13,11 +13,6 @@ div.page {
   margin-right:5px;
 }
 
-img {
-  height: auto;
-  min-width: 100%;
-}
-
 p {
   font-family: Helvetica, 'Times New Roman', Times, serif, sans-serif;
   font-size: 13pt;
