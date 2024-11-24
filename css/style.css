@@ -13,6 +13,17 @@ div.page {
   margin-right:5px;
 }
 
+ul.student {
+  margin-left: 125px;
+}
+
+.team-img{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
 p {
   font-family: Helvetica, 'Times New Roman', Times, serif, sans-serif;
   font-size: 13pt;
