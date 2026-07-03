@@ -40,22 +40,43 @@
     <container>
       <p class="header">Research Projects</p>
       <div class="panel-group">
+        <div class="panel panel-warning">
+          <div class="panel-heading"><h4>HoloScope--Software Supply Chain Security</h5></div>
+          <div class="panel-body">
+            <img class="img-resonsive pull-left" src="images/ssc.png" width="300">
+            <p>Software supply chains play a critical role in delivering reliable and secure software products to end-users. However, recent high-profile security breaches and supply chain attacks have highlighted the vulnerabilities inherent in these systems. This project focuses on enhancing software supply chain security through innovative techniques such as LLM agent, fine-grained program dependency construction, clone detection, vulnerability recognization, vulnerability propagation analysis, security pre-warning, and more. The ultimate goal of this project aligns closely with the principles of AppSecOps, aiming to integrate security practices into the application development and operations processes to enhance the security of software applications throughout their lifecycle. We aims to help organizations build and deploy more secure, resilient, and reliable software applications in today's rapidly evolving threat landscape.</p>
+          </div>
+        </div>
+
         <div class="panel panel-success">
           <div class="panel-heading"><h4>Automated Software Vulnerability Repair</h4></div>
           <div class="panel-body">
             <img class="img-resonsive pull-right" src="images/repair.png" width="260">
-            <p>As every developer knows, maintaining software and fixing software bugs are difficult and extremely time-consuming. Researchers have proposed automated patch generation techniques to help developers fix software bugs. However, it is very hard to ensure that automatically generated patches reflect the intent of developers. This project aims to efficiently generate high-quality program patches.</p>
+            <p>As every developer knows, maintaining software and fixing software bugs are difficult and extremely time-consuming. Researchers have proposed automated patch generation techniques to help developers fix software bugs. However, it is very hard to ensure that automatically generated patches reflect the intent of developers. This project aims to efficiently generate high-quality patches for fixing security issues.</p>
 
             <p><a href="https://github.com/gaoxiang9430/fix2fit"><strong>Fix2Fit & VulnFix</strong></a> are techniques that generate patches by combining test generation and patch generation. Existing repair techniques take a test suite as correctness criterion, which may lead to overfitting patches, where the patched programs pass given tests but still fail on tests outside them. Fix2Fit/VulnFix alleviates the overfitting problem via an intelligent test generation to filter out overfitting patches. Fix2Fit/VulnFix provides greater confidence about the correctness of our suggested patches.</p>
 
             <p><a href="https://extractfix.github.io"><strong>ExtractFix</strong></a> presents a repair method that fixes program vulnerabilities based on semantic reasoning. Given a vulnerability as evidenced by an exploit, ExtractFix extracts a constraint representing the vulnerability. The extracted constraint then serves as a proof obligation that our synthesized patch should satisfy. Semantic reasoning in terms of the extracted constraint ensures generated patches completely fix the vulnerabilities.</p>
 
-            <p><a href="./papers/F1X.pdf"><strong>F1X</strong></a> presents a repair method which fixes program bugs efficiently. In its core, F1X proposes a partition-based exploration strategy to efficiently explore the candidate search space. F1X generates more repairs and finds repairs faster compared with state-of-the-art techniques.</p>
+            <!--p><a href="./papers/F1X.pdf"><strong>F1X</strong></a> presents a repair method which fixes program bugs efficiently. In its core, F1X proposes a partition-based exploration strategy to efficiently explore the candidate search space. F1X generates more repairs and finds repairs faster compared with state-of-the-art techniques.</p-->
 
           </div>
         </div>
 
-        <div class="panel panel-warning">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4>LLM for Software Testing</h4></div>
+          <div class="panel-body">
+            <img class="img-resonsive pull-right" src="images/dnn.png" width="160">
+            <p>As every developer knows, writing thorough tests are tedious yet indispensable to software quality. Large Language Models (LLMs) have been explored to automate test generation and maintenance. However, it is very hard to ensure that LLM-generated tests capture deep semantic properties, handle language-specific nuances like dynamic typing, and effectively reveal hidden faults beyond superficial coverage. This project aims to systematically integrate LLMs with classical software engineering techniques—genetic algorithms, type inference, and adversarial specification validation—to generate rigorous, context-aware, and semantically trustworthy tests that uncover real bugs and enforce what the code should truly do.</p>
+            
+            <p><a href="https://github.com/T90REAL/PROBE"><strong>Property-Based Testing</strong></a> Tests should not just check if code runs, but verify whether it behaves correctly under all conditions. Yet LLMs often generate shallow tests that only exercise the happy path. We push LLMs to think in terms of properties—the rules, invariants, and contracts that define correct behavior. Our approach teaches the LLM to challenge its own generated tests by looking for loopholes: if a test passes the code but fails to catch a subtle violation of the intended rule, we refine the test until it does. By learning from existing test patterns and actively probing for semantic gaps, our method has uncovered 45 real-world bugs in widely-used libraries.
+
+            <p><a href="https://doi.org/10.5281/zenodo.18719652"><strong>Test4Py</strong></a> Testing dynamic programming languages (like Python) is notoriously tricky because types are not explicitly declared—making it hard to know what inputs a function expects or what outputs it should produce. LLMs often generate tests that simply cannot run due to type mismatches. Test4Py makes LLMs "type-aware": it understands how functions are actually used in practice and generates test inputs that are both valid and meaningful. 
+           
+          </div>
+        </div>
+
+        <!--div class="panel panel-warning">
           <div class="panel-heading"><h4>Program Synthesis for Program Transformation</h5></div>
           <div class="panel-body">
             <img class="img-resonsive pull-right" src="images/synthesis.png" width="260">
@@ -65,9 +86,9 @@
 
             <p><a href="https://github.com/rshariffdeen/fixmorph"><strong>FixMorph</strong></a> is a technique that performs automated patch backporting in Linux. The Linux Kernel developers often fix Kernel bugs by introducing a patch into the mainline version of the Linux kernel source tree. However, the patch should also be “backported” to one or more of these older kernel versions. FixMorph synthesizes a transformation rule according to the patch from the mainline version and automatically backports the patch to old stable versions by applying the learned rules. </p>
           </div>
-        </div>
+        </div-->
 
-        <div class="panel panel-default">
+        <!--div class="panel panel-default">
           <div class="panel-heading"><h4>Software Engineering for Artificial Intelligence (SE4AI)</h4></div>
           <div class="panel-body">
             <img class="img-resonsive pull-right" src="images/dnn.png" width="160">
@@ -78,7 +99,7 @@
             <p><a href="https://github.com/gaoxiang9430/sensei"><strong>Sensei</strong></a> is a technique that re-purposes software testing methods, specifically mutation-based fuzzing, to augment the training data of DNNs, with the objective of enhancing their robustness. Sensei casts the DNN data augmentation problem as an optimization problem. It uses genetic search to generate the most suitable variant of input data to use for training the DNN. Sensei improves the robust accuracy of the DNN, compared to the state of the art, by up to 11.9% and 5.5% on average.</p>
 
           </div>
-        </div>
+        </div-->
 
         <!--
         <div class="panel panel-info">
