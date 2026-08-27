@@ -1,536 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Xiang Gao</title>
+  <title>Publications — Xiang Gao</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="description" content="Publications of Xiang Gao, Associate Professor at the School of Computer Science, Beihang University.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" href="#">Xiang Gao</a>
-      </div>
-      <div class="collapse navbar-collapse offcanvas-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li class=""><a href="./index.html">Home</a></li>
-          <li class="active"><a href="./pubs.html" title="publication">Publication</a></li>
-          <li class=""><a href="./project.html" title="award">Project</a></li>
-          <!--li class=""><a href="./experience.html" title="Experience">Experience</a></li-->
-          <li class=""><a href="./service.html" title="service">Service</a></li>
-          <li class=""><a href="./teaching.html" title="award">Teaching</a></li>
-          <li class=""><a href="./CV.pdf" title="cv" target="_blank">CV</a></li>
-        </ul>
-      </div>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Xiang Gao <span class="brand-cn">高祥</span></a>
+      <input type="checkbox" id="nav-toggle-checkbox" class="nav-toggle-checkbox" aria-hidden="true">
+      <label class="nav-toggle" for="nav-toggle-checkbox" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="pubs.html">Publications</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
     </div>
   </nav>
 
   <div class="page">
-    <p class="a">
-      <img src="images/google_scholar.png" width="25" height="25">
-      <a href="https://scholar.google.com.sg/citations?user=nML3tzkAAAAJ&hl=en">Google Scholar</a>
-      &nbsp;&nbsp;
-      <img src="images/dblp.png" width="25" height="25">
-      <a href="https://dblp.org/pid/14/3881-12.html">DBLP</a>
-    </p>
-    <p style="color:blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* means co-first author; # means corresponding author</p>
+    <div class="profile-links">
+      <a href="https://scholar.google.com/citations?user=nML3tzkAAAAJ&amp;hl=en" target="_blank" rel="noopener"><img src="images/google_scholar.png" alt="Google Scholar icon">Google Scholar</a>
+      <a href="https://dblp.org/pid/14/3881-12.html" target="_blank" rel="noopener"><img src="images/dblp.png" alt="DBLP icon">DBLP</a>
+    </div>
 
-    <p><h3 class="">2026</h3></p>
-    <ul class="">
-    <li>
-      <h4 class=""><strong>DepUpgrade: Automating Dependency Upgrade through State-Path Exploration</strong>
-        <a href="./papers/TOSEM26_Test4Py.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-      </h4>
-      Xiangxi Ma, Yifan An, Wentong Tian, Xuanqi Wang, Qingao Dong, <strong><u>Xiang Gao</u></strong>#, Hailong Sun
-      <p class="">International Conference on Automated Software Engineering (ASE), 2026</p>
-    </li>
-    <li>
-      <h4 class=""><strong>Type-aware LLM-based Test Generation for Python Programs</strong>
-        <a href="./papers/TOSEM26_Test4Py.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-      </h4>
-      Runlin Liu, Zhe Zhang, Yunge Hu, Yuhang Lin, <strong><u>Xiang Gao</u></strong>#, Hailong Sun
-      <p class="">ACM Transactions on Software Engineering and Methodology (TOSEM), 2026</p>
-    </li>
-    <li>
-      <h4 class=""><strong>Fusing LLMs and Genetic Algorithm for High-Quality Unit Test Generation</strong>
-        <a href="./papers/TOSEM26_LegaTest.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-      </h4>
-      Yiwen Fu, <strong><u>Xiang Gao</u></strong>#, Binhang Qi, Yuan Yuan, Hailong Sun
-      <p class="">ACM Transactions on Software Engineering and Methodology (TOSEM), 2026</p>
-    </li>
-    <li>
-      <h4 class=""><strong>Vulnerability Identification by Harnessing Inter-connected Multi-Source Information</strong>
-        <a href="./papers/JSS26_VPFinder.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-      </h4>
-      Liyou Chen, Hailong Sun, <strong><u>Xiang Gao</u></strong>#, Lin Shi, Yixin Yang, Yi Xu
-      <p class="">Journal of Systems and Software (JSS), 2026</p>
-    </li>
-    <li>
-        <h4 class=""><strong>PGS: Effective LLM Code Refinement via Property-Oriented and Structurally Minimal Feedback</strong>
-          <a href="https://arxiv.org/pdf/2506.18315v2"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Lehan He, Zeren Chen, Zhe Zhang, <strong><u>Xiang Gao</u></strong>, Lu Sheng
-        <p class=""><p class="">International Conference on Machine Learning (ICML 2026)</p>
-    </li>
-	  <li>
-        <h4 class=""><strong>Efficient Bug Detection by Inferring Implicit API Contract of Pointer State Transition</strong>
-          <a href="./papers/ConTract.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Xingjing Deng, Yunlong Ma, <strong><u>Xiang Gao</u></strong>#, Hailong Sun
-        <p class=""><p class="">International Conference on Dependable Systems and Networks (DSN 2026)</p>
-    </li>
-	  <li>
-        <h4 class=""><strong>Beyond Superficial Tests: Adversarial Refinement for Reliable Property-Based Testing</strong>
-          <a href="./papers/Probe.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Xiao Li, Runlin Liu, Zhe Zhang, <strong><u>Xiang Gao</u></strong>#, Hailong Sun
-        <p class=""><p class="">Annual Meeting of the Association for Computational Linguistics (ACL Findings 2026)</p>
+    <h2 class="pub-year">2026</h2>
+    <ul class="pub-list">
+      <li>
+        <p class="pub-title">DepUpgrade: Automating Dependency Upgrade through State-Path Exploration
+          <span class="pub-links"><a href="papers/ASE26.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Xiangxi Ma, Yifan An, Wentong Tian, Xuanqi Wang, Qingao Dong, <strong><u>Xiang Gao</u></strong>#, Hailong Sun</p>
+        <p class="pub-venue">International Conference on Automated Software Engineering (ASE), 2026</p>
       </li>
       <li>
-        <h4 class=""><strong>Code2Bench: Scaling Source and Rigor for Dynamic Benchmark Construction</strong>
-          <a href="https://openreview.net/pdf?id=QZmKyAy1VK"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Zhe Zhang, Runlin Liu, Aishan Liu, Xingyu Liu, <strong><u>Xiang Gao</u></strong>#, Hailong Sun
-        <p class=""><p class="">International Conference on Learning Representations (ICLR) 2026</p>
+        <p class="pub-title">Type-aware LLM-based Test Generation for Python Programs
+          <span class="pub-links"><a href="papers/TOSEM26_Test4Py.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Runlin Liu, Zhe Zhang, Yunge Hu, Yuhang Lin, <strong><u>Xiang Gao</u></strong>#, Hailong Sun</p>
+        <p class="pub-venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2026</p>
       </li>
       <li>
-        <h4 class=""><strong>HapCheck: DSL-Based Static Bug Detection Framework for OpenHarmony</strong>
-          <a href="./papers/ICSE26_seip.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Xitong Zhong, Chang Liu, Runlin Liu, Zifu Xu, Zhengyao Liu, Juqi Zhou, Gang Fan, Mingyi Zhou, <strong><u>Xiang Gao</u></strong>#, Li Li
-        <p class=""><p class="">International Conference on Software Engineering, SEIP Track (ICSE) 2026</p>
+        <p class="pub-title">Fusing LLMs and Genetic Algorithm for High-Quality Unit Test Generation
+          <span class="pub-links"><a href="papers/TOSEM26_LegaTest.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yiwen Fu, <strong><u>Xiang Gao</u></strong>#, Binhang Qi, Yuan Yuan, Hailong Sun</p>
+        <p class="pub-venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2026</p>
       </li>
       <li>
-        <h4 class=""><strong>ModularEvo: Evolving Multi-Task Models via Neural Network Modularization and Composition</strong></h4>
-        Wenrui Long, Binhang Qi, Hailong Sun, ZongZhen Yang, Ruobing Zhao, Xiang Gao
-        <p class=""><p class="">International Conference on Software Engineering (ICSE) 2026</p>
+        <p class="pub-title">Vulnerability Identification by Harnessing Inter-connected Multi-Source Information
+          <span class="pub-links"><a href="papers/JSS26_VPFinder.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Liyou Chen, Hailong Sun, <strong><u>Xiang Gao</u></strong>#, Lin Shi, Yixin Yang, Yi Xu</p>
+        <p class="pub-venue">Journal of Systems and Software (JSS), 2026</p>
+      </li>
+      <li>
+        <p class="pub-title">PGS: Effective LLM Code Refinement via Property-Oriented and Structurally Minimal Feedback
+          <span class="pub-links"><a href="https://arxiv.org/pdf/2506.18315v2" target="_blank" rel="noopener"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Lehan He, Zeren Chen, Zhe Zhang, <strong><u>Xiang Gao</u></strong>, Lu Sheng</p>
+        <p class="pub-venue">International Conference on Machine Learning (ICML), 2026</p>
+      </li>
+      <li>
+        <p class="pub-title">Efficient Bug Detection by Inferring Implicit API Contract of Pointer State Transition
+          <span class="pub-links"><a href="papers/ConTract.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Xingjing Deng, Yunlong Ma, <strong><u>Xiang Gao</u></strong>#, Hailong Sun</p>
+        <p class="pub-venue">International Conference on Dependable Systems and Networks (DSN), 2026</p>
+      </li>
+      <li>
+        <p class="pub-title">Beyond Superficial Tests: Adversarial Refinement for Reliable Property-Based Testing
+          <span class="pub-links"><a href="papers/Probe.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Xiao Li, Runlin Liu, Zhe Zhang, <strong><u>Xiang Gao</u></strong>#, Hailong Sun</p>
+        <p class="pub-venue">Annual Meeting of the Association for Computational Linguistics (ACL Findings), 2026</p>
+      </li>
+      <li>
+        <p class="pub-title">Code2Bench: Scaling Source and Rigor for Dynamic Benchmark Construction
+          <span class="pub-links"><a href="https://openreview.net/pdf?id=QZmKyAy1VK" target="_blank" rel="noopener"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Zhe Zhang, Runlin Liu, Aishan Liu, Xingyu Liu, <strong><u>Xiang Gao</u></strong>#, Hailong Sun</p>
+        <p class="pub-venue">International Conference on Learning Representations (ICLR), 2026</p>
+      </li>
+      <li>
+        <p class="pub-title">HapCheck: DSL-Based Static Bug Detection Framework for OpenHarmony
+          <span class="pub-links"><a href="papers/ICSE26_seip.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Xitong Zhong, Chang Liu, Runlin Liu, Zifu Xu, Zhengyao Liu, Juqi Zhou, Gang Fan, Mingyi Zhou, <strong><u>Xiang Gao</u></strong>#, Li Li</p>
+        <p class="pub-venue">International Conference on Software Engineering, SEIP Track (ICSE), 2026</p>
+      </li>
+      <li>
+        <p class="pub-title">ModularEvo: Evolving Multi-Task Models via Neural Network Modularization and Composition</p>
+        <p class="pub-authors">Wenrui Long, Binhang Qi, Hailong Sun, ZongZhen Yang, Ruobing Zhao, Xiang Gao</p>
+        <p class="pub-venue">International Conference on Software Engineering (ICSE), 2026</p>
       </li>
     </ul>
 
-    <p><h3 class="">2025</h3></p>
-    <ul class="">
+    <h2 class="pub-year">2025</h2>
+    <ul class="pub-list">
       <li>
-        <h4 class=""><strong>Scalable Large-Scale Multi-Granularity Code Clone Detection via Clustering Search and Pre-trained Models</strong>
-          <a href="./papers/TSE25_MGCD.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Yifan An, Yunlong Ma, <strong><u>Xiang Gao</u></strong>#, Hailong Sun
-        <p class="">IEEE TRANSACTION ON SOFTWARE ENGINEERING (TSE), 2025</p>
+        <p class="pub-title">Scalable Large-Scale Multi-Granularity Code Clone Detection via Clustering Search and Pre-trained Models
+          <span class="pub-links"><a href="papers/TSE25_MGCD.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yifan An, Yunlong Ma, <strong><u>Xiang Gao</u></strong>#, Hailong Sun</p>
+        <p class="pub-venue">IEEE Transactions on Software Engineering (TSE), 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>Context-Enhanced Vulnerability Detection Based on Large Language Models</strong>
-          <a href="./papers/TOSEM25_ProcVD.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Yixing Yang, Bowen Xu, <strong><u>Xiang Gao</u></strong>#, Hailong Sun#
-        <p class="">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025</p>
-      </li>
-
-	    <li>
-        <h4 class=""><strong>UICOMPASS: UI Map Guided Mobile Task Automation via Adaptive Action Generation</strong>
-          <a href="./papers/EMNLP25_UICompass.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Yuanzhang Lin, Zhe Zhang, He Rui, Qingao Dong, Mingyi Zhou, Jing Zhang, <strong><u>Xiang Gao</u></strong>#,  Hailong Sun#
-        <p class="">Empirical Methods in Natural Language Processing (EMNLP), 2025</p>
+        <p class="pub-title">Context-Enhanced Vulnerability Detection Based on Large Language Models
+          <span class="pub-links"><a href="papers/TOSEM25_ProcVD.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yixing Yang, Bowen Xu, <strong><u>Xiang Gao</u></strong>#, Hailong Sun#</p>
+        <p class="pub-venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>Reference-Based Retrieval-Augmented Unit Test Generation</strong>
-          <a href="./papers/TOSEM25_RefTest.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Zhe Zhang, Xingyu Liu, Yuanzhang Lin, <strong><u>Xiang Gao</u></strong>#, Hailong Sun#, Yuan, Yuan
-        <p class="">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025</p>
+        <p class="pub-title">UICOMPASS: UI Map Guided Mobile Task Automation via Adaptive Action Generation
+          <span class="pub-links"><a href="papers/EMNLP25_UICompass.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yuanzhang Lin, Zhe Zhang, He Rui, Qingao Dong, Mingyi Zhou, Jing Zhang, <strong><u>Xiang Gao</u></strong>#, Hailong Sun#</p>
+        <p class="pub-venue">Empirical Methods in Natural Language Processing (EMNLP), 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>NeMo: A Neuron-Level Modularizing-While-Training Approach for Decomposing DNN Models</strong>
-          <a href="https://arxiv.org/pdf/2508.11348"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Xiaohan Bi, Binhang Qi, Hailong Sun, <strong><u>Xiang Gao</u></strong>, Yue Yu, Xiaojun Liang
-        <p class="">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025</p>
+        <p class="pub-title">Reference-Based Retrieval-Augmented Unit Test Generation
+          <span class="pub-links"><a href="papers/TOSEM25_RefTest.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Zhe Zhang, Xingyu Liu, Yuanzhang Lin, <strong><u>Xiang Gao</u></strong>#, Hailong Sun#, Yuan Yuan</p>
+        <p class="pub-venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>CABS: Conflict-Aware and Balanced Sparsification for Enhancing Model Merging</strong>
-          <a href="https://openreview.net/pdf?id=ZZxVwVUYg3"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Zongzhen Yang, Binhang Qi, Hailong Sun, Wenrui Long, Ruobing Zhao, <strong><u>Xiang Gao</u></strong>
-        <p class="">International Conference on Machine Learning (ICML), 2025</p>
+        <p class="pub-title">NeMo: A Neuron-Level Modularizing-While-Training Approach for Decomposing DNN Models
+          <span class="pub-links"><a href="https://arxiv.org/pdf/2508.11348" target="_blank" rel="noopener"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Xiaohan Bi, Binhang Qi, Hailong Sun, <strong><u>Xiang Gao</u></strong>, Yue Yu, Xiaojun Liang</p>
+        <p class="pub-venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>Code Property Graph Meets Typestate: A Scalable Framework to Behavioral Bug Detection</strong>
-          <a href="./papers/ICSME2025b.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Xingjing Deng, Zhengyao Liu, Xitong Zhong, Shuo Hong, Yixin Yang, <strong><u>Xiang Gao</u></strong>#, Xuhui Yan, Hailong Sun#
-        <p class="">International Conference on Software Maintenance and Evolution (ICSME), 2025</p>
-        <p style="color:red">IEEE TCSE Distinguished Paper Award</p>
+        <p class="pub-title">CABS: Conflict-Aware and Balanced Sparsification for Enhancing Model Merging
+          <span class="pub-links"><a href="https://openreview.net/pdf?id=ZZxVwVUYg3" target="_blank" rel="noopener"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Zongzhen Yang, Binhang Qi, Hailong Sun, Wenrui Long, Ruobing Zhao, <strong><u>Xiang Gao</u></strong></p>
+        <p class="pub-venue">International Conference on Machine Learning (ICML), 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>Enhanced Vulnerability Localization: Harmonizing Task-Enhanced Tuning and General LLM Prompting</strong>
-          <a href="./papers/ICSME2025.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Wentong Tian, Yuanzhang Lin, <strong><u>Xiang Gao</u></strong>#, Hailong Sun#
-        <p class="">International Conference on Software Maintenance and Evolution (ICSME), 2025</p>
+        <p class="pub-title">Code Property Graph Meets Typestate: A Scalable Framework to Behavioral Bug Detection
+          <span class="pub-links"><a href="papers/ICSME2025b.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Xingjing Deng, Zhengyao Liu, Xitong Zhong, Shuo Hong, Yixin Yang, <strong><u>Xiang Gao</u></strong>#, Xuhui Yan, Hailong Sun#</p>
+        <p class="pub-venue">International Conference on Software Maintenance and Evolution (ICSME), 2025</p>
+        <p class="pub-note">IEEE TCSE Distinguished Paper Award</p>
       </li>
       <li>
-        <h4 class=""><strong>Software Engineering for OpenHarmony: A Research Roadmap</strong>
-          <a href="./papers/CSUR.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        Li Li, <strong><u>Xiang Gao</u></strong>, Hailong Sun, Chunming Hu, Xiaoyu Sun, Haoyu Wang, Haipeng Cai, Ting Su, Xiapu Luo,Tegawende F. Bissyande, Jacques Klein, John Grundy, Tao Xie, Haibo Chen, Huaimin Wang
-        <p class="">ACM Computing Surveys (CSUR) 2025 </p>
+        <p class="pub-title">Enhanced Vulnerability Localization: Harmonizing Task-Enhanced Tuning and General LLM Prompting
+          <span class="pub-links"><a href="papers/ICSME2025.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Wentong Tian, Yuanzhang Lin, <strong><u>Xiang Gao</u></strong>#, Hailong Sun#</p>
+        <p class="pub-venue">International Conference on Software Maintenance and Evolution (ICSME), 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>HapTest: The Dynamic Analysis Framework for OpenHarmony</strong>
-          <a href="./papers/FSE2025.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-        </h4>
-        Farong Liu， Mingyi Zhou, Yakun Zhang, Ting Su, Bo Sun, Jacques Klein, <strong><u>Xiang Gao</u></strong>, Li Li
-        <p class="">ACM International Conference on the Foundations of Software Engineering (FSE 2025 Industry) </p>
+        <p class="pub-title">Software Engineering for OpenHarmony: A Research Roadmap
+          <span class="pub-links"><a href="papers/CSUR.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Li Li, <strong><u>Xiang Gao</u></strong>, Hailong Sun, Chunming Hu, Xiaoyu Sun, Haoyu Wang, Haipeng Cai, Ting Su, Xiapu Luo, Tegawende F. Bissyande, Jacques Klein, John Grundy, Tao Xie, Haibo Chen, Huaimin Wang</p>
+        <p class="pub-venue">ACM Computing Surveys (CSUR), 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>Understanding vulnerabilities in software supply chains</strong>
-          <a href="./papers/emse.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-        </h4>
-        Yijun Shen, <strong><u>Xiang Gao</u></strong>#, Hailong Sun, Yu Guo
-        <p class="">Empirical Software Engineering (EMSE) 2025 </p>
+        <p class="pub-title">HapTest: The Dynamic Analysis Framework for OpenHarmony
+          <span class="pub-links"><a href="papers/FSE2025.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Farong Liu, Mingyi Zhou, Yakun Zhang, Ting Su, Bo Sun, Jacques Klein, <strong><u>Xiang Gao</u></strong>, Li Li</p>
+        <p class="pub-venue">ACM International Conference on the Foundations of Software Engineering (FSE), Industry Track, 2025</p>
       </li>
       <li>
-        <h4 class=""><strong>Enhancing Automated Vulnerability Repair through Dependency Embedding and Pattern Store</strong>
-          <a href="./papers/saner25.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-        </h4>
-        Qingao Dong, Yuanzhang Lin, Hailong Sun, <strong><u>Xiang Gao</u></strong>#
-        <p class="">International Conference on Software Analysis, Evolution and Reengineering (SANER) 2024</p>
+        <p class="pub-title">Understanding Vulnerabilities in Software Supply Chains
+          <span class="pub-links"><a href="papers/emse.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yijun Shen, <strong><u>Xiang Gao</u></strong>#, Hailong Sun, Yu Guo</p>
+        <p class="pub-venue">Empirical Software Engineering (EMSE), 2025</p>
+      </li>
+      <li>
+        <p class="pub-title">Enhancing Automated Vulnerability Repair through Dependency Embedding and Pattern Store
+          <span class="pub-links"><a href="papers/saner25.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Qingao Dong, Yuanzhang Lin, Hailong Sun, <strong><u>Xiang Gao</u></strong>#</p>
+        <p class="pub-venue">International Conference on Software Analysis, Evolution and Reengineering (SANER), 2025</p>
       </li>
     </ul>
-    <p><h3 class="">2024</h3></p>
-    <ul class="">  
-      <li>
-        <h4 class=""><strong>DynaMO: Protecting Mobile DL Models through Coupling Obfuscated DL Operators</strong>
-          <a href="./papers/ASE2024.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
 
-        </h4>
-        Mingyi Zhou, <strong><u>Xiang Gao</u></strong>, Xiao Chen, Chunyang Chen, John Grundy, Li Li
-        <p class="">International Conference on Automated Software Engineering (ASE) 2024 </p>
+    <h2 class="pub-year">2024</h2>
+    <ul class="pub-list">
+      <li>
+        <p class="pub-title">DynaMO: Protecting Mobile DL Models through Coupling Obfuscated DL Operators
+          <span class="pub-links"><a href="papers/ASE2024.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Mingyi Zhou, <strong><u>Xiang Gao</u></strong>, Xiao Chen, Chunyang Chen, John Grundy, Li Li</p>
+        <p class="pub-venue">International Conference on Automated Software Engineering (ASE), 2024</p>
       </li>
       <li>
-        <h4 class=""><strong>LLM-Based Java Concurrent Program to ArkTS Converter</strong>
-          <a href="./papers/ase2024_demo.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Runlin Liu, Yuhang Lin, Yunge Hu, Zhe Zhang, <strong><u>Xiang Gao</u></strong>#
-        <p class="">International Conference on Automated Software Engineering Tool (ASE) 2024 </p>
+        <p class="pub-title">LLM-Based Java Concurrent Program to ArkTS Converter
+          <span class="pub-links"><a href="papers/ase2024_demo.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Runlin Liu, Yuhang Lin, Yunge Hu, Zhe Zhang, <strong><u>Xiang Gao</u></strong>#</p>
+        <p class="pub-venue">International Conference on Automated Software Engineering, Tool Track (ASE), 2024</p>
       </li>
       <li>
-        <h4 class=""><strong>API Misuse Detection via Probabilistic Graphical Model</strong>
-          <a href="./papers/ISSTA2024.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Yunlong Ma, Wentong Tian, <strong><u>Xiang Gao</u></strong>#, Hailong Sun, Li Li
-        <p class="">International Symposium on Software Testing and Analysis (ISSTA) 2024</p>
+        <p class="pub-title">API Misuse Detection via Probabilistic Graphical Model
+          <span class="pub-links"><a href="papers/ISSTA2024.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yunlong Ma, Wentong Tian, <strong><u>Xiang Gao</u></strong>#, Hailong Sun, Li Li</p>
+        <p class="pub-venue">International Symposium on Software Testing and Analysis (ISSTA), 2024</p>
       </li>
       <li>
-        <h4 class=""><strong>Model-less Is The Best Model: Generating Pure Code Implementations to Replace On-device DL Models</strong>
-          <a href="./papers/ISSTA2024b.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Mingyi Zhou, <strong><u>Xiang Gao</u></strong>, Pei Liu, John Grundy, Chunyang Chen, Xiao Chen, Li Li
-        <p class="">International Symposium on Software Testing and Analysis (ISSTA) 2024</p>
-      </li>
-
-      <li>
-        <h4 class=""><strong>ProveNFix: Temporal Property guided Program Repair</strong>
-          <a href="./papers/fse24.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Yahui Song, <strong><u>Xiang Gao</u></strong>, Wenhua Li, Wei Ngan Chin, Abhik Roychoudhury
-        <p class="">International Conference on the Foundations of Software Engineering (FSE) 2024</p>
-        <p style="color:red">ACM SIGSOFT Distinguished Paper Award</p>
-      </li>
-
-      <li>
-        <h4 class=""><strong>Modularizing while Training: A New Paradigm for Modularizing DNN Models</strong>
-          <a href="./papers/icse24a.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Binhang Qi, Hailong Sun#, Hongyu Zhang, Ruobing Zhao, <strong><u>Xiang Gao</u></strong>#
-        <p class="">International Conference on Software Engineering (ICSE) 2024</p>
-	      <p style="color:red">ACM SIGSOFT Distinguished Paper Award</p>
-      </li>
-
-      <li>
-        <h4 class=""><strong>Investigating White-Box Attacks for On-Device Models</strong>
-          <a href="http://arxiv.org/abs/2306.09376"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Mingyi Zhou, <strong><u>Xiang Gao</u></strong>, Jing Wu, Kui Liu, Hailong Sun, Li Li
-        <p class="">International Conference on Software Engineering (ICSE) 2024</p>
-      </li>
-
-      <li>
-        <h4 class=""><strong>Investigating and Detecting Silent Bugs in PyTorch Programs</strong>
-          <a href="./papers/saner24a.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-        </h4>
-        Shuo Hong, Hailong Sun, <strong><u>Xiang Gao</u></strong>#, Shin Hwei Tan
-        <p class="">International Conference on Software Analysis, Evolution and Reengineering (SANER) 2024</p>
-        <p style="color:red">IEEE TCSE Distinguished Paper Award</p>
-      </li>
-
-      <li>
-        <h4 class=""><strong>Reducing False Positives of Static Bug Detectors through Code Representation Learning</strong>
-          <a href="./papers/saner24b.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-        </h4>
-        Yixin Yang, Ming Wen, <strong><u>Xiang Gao</u></strong>, Yuting Zhang, Hailong Sun
-        <p class="">International Conference on Software Analysis, Evolution and Reengineering (SANER) 2024</p>
-      </li>
-    </ul><hr>
-    
-    <p><h3 class="">2023</h3></p>
-    <ul class="">  
-      <li>
-        <h4 class=""><strong>Reusing Convolutional Neural Network Models through Modularization and Composition</strong>
-          <a href="./papers/Tosem23.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://github.com/qibinhang/GradSplitter"> <img src="images/github.png" width="25" height="25"></a> 
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Binhang Qi, Hailong Sun, Hongyu Zhang, <strong><u>Xiang Gao</u></strong>
-        <p class="">ACM Transactions on Software Engineering and Methodology (TOSEM), 2023</p>
-      </li>
-
-      <li>
-        <h4 class=""><strong>Automated Fixing of Web UI Tests via Iterative Element Matching</strong>
-          <a href="./papers/ASE23_UITESTFIX.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://anonymous.4open.science/r/Web-UI-Dataset-9645"> <img src="images/github.png" width="25" height="25"></a> 
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Yuanzhang Lin, Guoyao Wen, <strong><u>Xiang Gao</u></strong>#
-        <p class="">International Conference on Automated Software Engineering (ASE) 2023</p>
-      </li>
-
-      <li>
-        <h4 class=""><strong>ModelObfuscator: Obfuscating Model Information to Protect Deployed ML-based Systems</strong>
-          <a href="./papers/issta2023.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://github.com/zhoumingyi/ModelObfuscator"> <img src="images/github.png" width="25" height="25"></a> 
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Mingyi Zhou, <strong><u>Xiang Gao</u></strong>, Jing Wu, John Grundy, Xiao Chen, Chunyang Chen, Li Li
-        <p class="">International Symposium on Software Testing and Analysis (ISSTA) 2023</p>
+        <p class="pub-title">Model-less Is The Best Model: Generating Pure Code Implementations to Replace On-device DL Models
+          <span class="pub-links"><a href="papers/ISSTA2024b.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Mingyi Zhou, <strong><u>Xiang Gao</u></strong>, Pei Liu, John Grundy, Chunyang Chen, Xiao Chen, Li Li</p>
+        <p class="pub-venue">International Symposium on Software Testing and Analysis (ISSTA), 2024</p>
       </li>
       <li>
-        <h4 class=""><strong>Automated Repair of Programs from Large Language Models</strong>
-        	<a href="./papers/icse23a.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <a href=" https://github.com/zhiyufan/apr4codex"> <img src="images/github.png" width="25" height="25"></a> 
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
+        <p class="pub-title">ProveNFix: Temporal Property guided Program Repair
+          <span class="pub-links"><a href="papers/fse24.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yahui Song, <strong><u>Xiang Gao</u></strong>, Wenhua Li, Wei Ngan Chin, Abhik Roychoudhury</p>
+        <p class="pub-venue">International Conference on the Foundations of Software Engineering (FSE), 2024</p>
+        <p class="pub-note">ACM SIGSOFT Distinguished Paper Award</p>
+      </li>
+      <li>
+        <p class="pub-title">Modularizing while Training: A New Paradigm for Modularizing DNN Models
+          <span class="pub-links"><a href="papers/icse24a.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Binhang Qi, Hailong Sun#, Hongyu Zhang, Ruobing Zhao, <strong><u>Xiang Gao</u></strong>#</p>
+        <p class="pub-venue">International Conference on Software Engineering (ICSE), 2024</p>
+        <p class="pub-note">ACM SIGSOFT Distinguished Paper Award</p>
+      </li>
+      <li>
+        <p class="pub-title">Investigating White-Box Attacks for On-Device Models
+          <span class="pub-links"><a href="http://arxiv.org/abs/2306.09376" target="_blank" rel="noopener"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Mingyi Zhou, <strong><u>Xiang Gao</u></strong>, Jing Wu, Kui Liu, Hailong Sun, Li Li</p>
+        <p class="pub-venue">International Conference on Software Engineering (ICSE), 2024</p>
+      </li>
+      <li>
+        <p class="pub-title">Investigating and Detecting Silent Bugs in PyTorch Programs
+          <span class="pub-links"><a href="papers/saner24a.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Shuo Hong, Hailong Sun, <strong><u>Xiang Gao</u></strong>#, Shin Hwei Tan</p>
+        <p class="pub-venue">International Conference on Software Analysis, Evolution and Reengineering (SANER), 2024</p>
+        <p class="pub-note">IEEE TCSE Distinguished Paper Award</p>
+      </li>
+      <li>
+        <p class="pub-title">Reducing False Positives of Static Bug Detectors through Code Representation Learning
+          <span class="pub-links"><a href="papers/saner24b.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yixin Yang, Ming Wen, <strong><u>Xiang Gao</u></strong>, Yuting Zhang, Hailong Sun</p>
+        <p class="pub-venue">International Conference on Software Analysis, Evolution and Reengineering (SANER), 2024</p>
+      </li>
+    </ul>
 
-        </h4>
-        Zhiyu Fan, <strong><u>Xiang Gao</u></strong>#, Martin Mirchev, Abhik Roychoudhury,Shin Hwei Tan
-        <p class="">International Conference on Software Engineering (ICSE) 2023</p>
+    <h2 class="pub-year">2023</h2>
+    <ul class="pub-list">
+      <li>
+        <p class="pub-title">Reusing Convolutional Neural Network Models through Modularization and Composition
+          <span class="pub-links"><a href="papers/Tosem23.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/qibinhang/GradSplitter" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a></span></p>
+        <p class="pub-authors">Binhang Qi, Hailong Sun, Hongyu Zhang, <strong><u>Xiang Gao</u></strong></p>
+        <p class="pub-venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2023</p>
       </li>
       <li>
-        <h4 class=""><strong>Reusing Deep Neural Network Models through Model Re-engineering</strong>
-          <a href="./papers/icse23b.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://github.com/qibinhang/SeaM"> <img src="images/github.png" width="25" height="25"></a> 
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
+        <p class="pub-title">Automated Fixing of Web UI Tests via Iterative Element Matching
+          <span class="pub-links"><a href="papers/ASE23_UITESTFIX.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://anonymous.4open.science/r/Web-UI-Dataset-9645" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a></span></p>
+        <p class="pub-authors">Yuanzhang Lin, Guoyao Wen, <strong><u>Xiang Gao</u></strong>#</p>
+        <p class="pub-venue">International Conference on Automated Software Engineering (ASE), 2023</p>
+      </li>
+      <li>
+        <p class="pub-title">ModelObfuscator: Obfuscating Model Information to Protect Deployed ML-based Systems
+          <span class="pub-links"><a href="papers/issta2023.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/zhoumingyi/ModelObfuscator" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a></span></p>
+        <p class="pub-authors">Mingyi Zhou, <strong><u>Xiang Gao</u></strong>, Jing Wu, John Grundy, Xiao Chen, Chunyang Chen, Li Li</p>
+        <p class="pub-venue">International Symposium on Software Testing and Analysis (ISSTA), 2023</p>
+      </li>
+      <li>
+        <p class="pub-title">Automated Repair of Programs from Large Language Models
+          <span class="pub-links"><a href="papers/icse23a.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/zhiyufan/apr4codex" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a></span></p>
+        <p class="pub-authors">Zhiyu Fan, <strong><u>Xiang Gao</u></strong>#, Martin Mirchev, Abhik Roychoudhury, Shin Hwei Tan</p>
+        <p class="pub-venue">International Conference on Software Engineering (ICSE), 2023</p>
+      </li>
+      <li>
+        <p class="pub-title">Reusing Deep Neural Network Models through Model Re-engineering
+          <span class="pub-links"><a href="papers/icse23b.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/qibinhang/SeaM" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a></span></p>
+        <p class="pub-authors">Binhang Qi, Hailong Sun#, <strong><u>Xiang Gao</u></strong>#, Hongyu Zhang, Zhaotian Li, Xudong Liu</p>
+        <p class="pub-venue">International Conference on Software Engineering (ICSE), 2023</p>
+      </li>
+    </ul>
 
-        </h4>
-        Binhang Qi, Hailong Sun#, <strong><u>Xiang Gao</u></strong>#, Hongyu Zhang, Zhaotian Li, Xudong Liu
-        <p class="">International Conference on Software Engineering (ICSE) 2023</p>
+    <h2 class="pub-year">2022</h2>
+    <ul class="pub-list">
+      <li>
+        <p class="pub-title">Patching Weak Convolutional Neural Network Models through Modularization and Composition
+          <span class="pub-links"><a href="papers/CNNSplitter.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/qibinhang/CNNSplitter" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a></span></p>
+        <p class="pub-authors">Binhang Qi, Hailong Sun#, <strong><u>Xiang Gao</u></strong>#, Hongyu Zhang</p>
+        <p class="pub-venue">International Conference on Automated Software Engineering (ASE), 2022</p>
       </li>
-    </ul><hr>
+      <li>
+        <p class="pub-title">Program Vulnerability Repair via Inductive Inference
+          <span class="pub-links"><a href="papers/VulnFix.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/yuntongzhang/vulnfix" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a></span></p>
+        <p class="pub-authors">Yuntong Zhang, <strong><u>Xiang Gao</u></strong>#, Gregory J. Duck, Abhik Roychoudhury</p>
+        <p class="pub-venue">International Symposium on Software Testing and Analysis (ISSTA), 2022</p>
+      </li>
+      <li>
+        <p class="pub-title">Trust Enhancement Issues in Program Repair
+          <span class="pub-links"><a href="https://arxiv.org/pdf/2108.13064.pdf" target="_blank" rel="noopener"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Yannic Noller, Ridwan Shariffdeen, <strong><u>Xiang Gao</u></strong>, Abhik Roychoudhury</p>
+        <p class="pub-venue">International Conference on Software Engineering (ICSE), 2022</p>
+      </li>
+    </ul>
 
-    <p><h3 class="">2022</h3></p>
-    <ul class="">
+    <h2 class="pub-year">Before 2022</h2>
+    <ul class="pub-list">
       <li>
-        <h4 class=""><strong>Patching Weak Convolutional Neural Network Models through Modularization and Composition</strong>
-          <a href="./papers/CNNSplitter.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://github.com/qibinhang/CNNSplitter"> <img src="images/github.png" width="25" height="25"></a> 
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
+        <p class="pub-title">Overfitting in Program Repair and Program Synthesis
+          <span class="pub-links"><a href="papers/Thesis.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong></p>
+        <p class="pub-venue">PhD Dissertation, National University of Singapore, 2021</p>
+      </li>
+      <li>
+        <p class="pub-title">Scalable Fuzzing of Program Binaries with E9AFL
+          <span class="pub-links"><a href="https://github.com/GJDuck/e9afl" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a><a href="https://youtu.be/bVyADCGZlnw" target="_blank" rel="noopener"><img src="images/video.png" alt="Video"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong>, Gregory J. Duck, Abhik Roychoudhury</p>
+        <p class="pub-venue">International Conference on Automated Software Engineering, Tool Track (ASE), 2021</p>
+      </li>
+      <li>
+        <p class="pub-title">APIfix: Output-Oriented Program Synthesis for Combating Breaking Changes in Libraries
+          <span class="pub-links"><a href="papers/APIFix.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong>, Arjun Radhakrishna, Gustavo Soares, Ridwan Shariffdeen, Sumit Gulwani, Abhik Roychoudhury</p>
+        <p class="pub-venue">Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA), 2021</p>
+      </li>
+      <li>
+        <p class="pub-title">Automated Patch Backporting in Linux (Experience Paper)
+          <span class="pub-links"><a href="papers/FixMorph.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/rshariffdeen/FixMorph" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a><a href="https://www.youtube.com/watch?v=NUNdEJnbTI0" target="_blank" rel="noopener"><img src="images/video.png" alt="Video"></a></span></p>
+        <p class="pub-authors">Ridwan Shariffdeen*, <strong><u>Xiang Gao</u></strong>*, Gregory J. Duck, Shin Hwei Tan, Julia Lawall, Abhik Roychoudhury <em>(*co-first authors)</em></p>
+        <p class="pub-venue">International Symposium on Software Testing and Analysis (ISSTA), 2021</p>
+        <p class="pub-note">Distinguished Artifact Award</p>
+      </li>
+      <li>
+        <p class="pub-title">Beyond Tests: Program Vulnerability Repair via Crash Constraint Extraction
+          <span class="pub-links"><a href="papers/ExtractFix.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://extractfix.github.io/" target="_blank" rel="noopener"><img src="images/link.png" alt="Website"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong>, Bo Wang, Gregory J. Duck, Ruyi Ji, Yingfei Xiong, Abhik Roychoudhury</p>
+        <p class="pub-venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2021</p>
+      </li>
+      <li>
+        <p class="pub-title">Feedback-Driven Semi-Supervised Synthesis of Program Transformations
+          <span class="pub-links"><a href="papers/OOPSLA_2020.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="slides/OOPSLA_2020.pdf"><img src="images/slides.png" alt="Slides"></a><a href="https://www.youtube.com/watch?v=CoLcclv-TbA" target="_blank" rel="noopener"><img src="images/video.png" alt="Video"></a><a href="https://www.youtube.com/watch?v=jrLaDB1VZqM" target="_blank" rel="noopener"><img src="images/video.png" alt="Video"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong>, Shraddha Barke, Arjun Radhakrishna, Gustavo Soares, Sumit Gulwani, Alan Leung, Nachiappan Nagappan, Ashish Tiwari</p>
+        <p class="pub-venue">Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA), 2020</p>
+      </li>
+      <li>
+        <p class="pub-title">Binary Rewriting without Control Flow Recovery
+          <span class="pub-links"><a href="papers/PLDI20.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/GJDuck/e9patch" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a><a href="https://www.youtube.com/watch?v=qK2ZCEStoG0" target="_blank" rel="noopener"><img src="images/video.png" alt="Video"></a></span></p>
+        <p class="pub-authors">Gregory J. Duck, <strong><u>Xiang Gao</u></strong>, Abhik Roychoudhury</p>
+        <p class="pub-venue">Programming Language Design and Implementation (PLDI), 2020</p>
+      </li>
+      <li>
+        <p class="pub-title">Interactive Patch Generation and Suggestion
+          <span class="pub-links"><a href="papers/APR20.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong>, Abhik Roychoudhury</p>
+        <p class="pub-venue">Automated Program Repair Workshop (APR @ ICSE), 2020</p>
+      </li>
+      <li>
+        <p class="pub-title">Fuzz Testing based Data Augmentation to Improve Robustness of Deep Neural Networks
+          <span class="pub-links"><a href="papers/Sensei_ICSE20.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/gaoxiang9430/sensei" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a><a href="https://www.youtube.com/watch?v=2VNL9yQnhp4" target="_blank" rel="noopener"><img src="images/video.png" alt="Video"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong>, Ripon K. Saha, Mukul R. Prasad, Abhik Roychoudhury</p>
+        <p class="pub-venue">International Conference on Software Engineering (ICSE), 2020</p>
+      </li>
+      <li>
+        <p class="pub-title">Crash-avoiding Program Repair
+          <span class="pub-links"><a href="papers/Fix2Fit.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://github.com/gaoxiang9430/fix2fit" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong>, Sergey Mechtaev, Abhik Roychoudhury</p>
+        <p class="pub-venue">ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA), 2019</p>
+      </li>
+      <li>
+        <p class="pub-title">Android Testing via Synthetic Symbolic Execution
+          <span class="pub-links"><a href="papers/SynthesiSE.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors"><strong><u>Xiang Gao</u></strong>, Shin Hwei Tan, Zhen Dong, Abhik Roychoudhury</p>
+        <p class="pub-venue">International Conference on Automated Software Engineering (ASE), 2018</p>
+      </li>
+      <li>
+        <p class="pub-title">Repairing Crashes in Android Apps
+          <span class="pub-links"><a href="papers/droixicse.pdf"><img src="images/pdf.png" alt="PDF"></a><a href="https://droix2017.github.io/" target="_blank" rel="noopener"><img src="images/link.png" alt="Website"></a></span></p>
+        <p class="pub-authors">Shin Hwei Tan, Zhen Dong, <strong><u>Xiang Gao</u></strong>, Abhik Roychoudhury</p>
+        <p class="pub-venue">International Conference on Software Engineering (ICSE), 2018</p>
+      </li>
+      <li>
+        <p class="pub-title">Test-equivalence Analysis for Automatic Patch Generation
+          <span class="pub-links"><a href="papers/F1X.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Sergey Mechtaev, <strong><u>Xiang Gao</u></strong>, Shin Hwei Tan, Abhik Roychoudhury</p>
+        <p class="pub-venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2018</p>
+      </li>
+    </ul>
 
-        </h4>
-        Binhang Qi, Hailong Sun#, <strong><u>Xiang Gao</u></strong>#, Hongyu Zhang
-        <p class="">International Conference on Automated Software Engineering (ASE) 2022</p>
-      </li>
+    <h2 class="pub-year">Work before PhD</h2>
+    <ul class="pub-list">
       <li>
-        <h4 class=""><strong>Program Vulnerability Repair via Inductive Inference</strong>
-          <a href="./papers/VulnFix.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://github.com/yuntongzhang/vulnfix"> <img src="images/github.png" width="25" height="25"></a> 
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
+        <p class="pub-title">Write-back aware shared last-level cache management for hybrid main memory
+          <span class="pub-links"><a href="papers/DAC16.pdf"><img src="images/pdf.png" alt="PDF"></a></span></p>
+        <p class="pub-authors">Deshan Zhang, Lei Ju, Mengying Zhao, <strong><u>Xiang Gao</u></strong>, Zhiping Jia</p>
+        <p class="pub-venue">53rd Design Automation Conference (DAC), 2016</p>
+      </li>
+    </ul>
 
-        </h4>
-        Yuntong Zhang, <strong><u>Xiang Gao</u></strong>#, Gregory J. Duck, Abhik Roychoudhury
-        <p class="">International Symposium on Software Testing and Analysis (ISSTA) 2022</p>
-      </li>
-      <li>
-        <h4 class=""><strong>Trust Enhancement Issues in Program Repair</strong>
-          <a href="https://arxiv.org/pdf/2108.13064.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
+    <p class="pub-legend"><strong>*</strong> co-first author &nbsp;&nbsp; <strong>#</strong> corresponding author</p>
 
-        </h4>
-        Yannic Noller, Ridwan Shariffdeen, <strong><u>Xiang Gao</u></strong>,  Abhik Roychoudhury
-        <p class="">International Conference on Software Engineering (ICSE) 2022</p>
-      </li>
-    </ul><hr>
-
-    <p><h3 class="">Before 2022</h3></p>
-    <ul>
-      <li>
-        <h4 class=""><strong>Overfitting in Program Repair and Program Synthesis</strong>
-          <a href="./papers/Thesis.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        <strong><u>Xiang Gao</u></strong>
-        <p class="">PhD Dissertation, National University of Singapore, 2021</p>
-      </li>
-      <li>
-        <h4 class=""><strong>Scalable Fuzzing of Program Binaries with E9AFL</strong>
-          <a href="https://github.com/GJDuck/e9afl"> <img src="images/github.png" width="25" height="25"></a>
-          <a href="https://youtu.be/bVyADCGZlnw"><img src="images/video.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        <strong><u>Xiang Gao</u></strong>, Gregory J. Duck, Abhik Roychoudhury
-        <p class="">International Conference on Automated Software Engineering Tool (ASE) 2021 </p>
-      </li>
-      <li>
-        <h4 class=""><strong>APIfix: Output-Oriented Program Synthesis for Combating Breaking Changes in Libraries</strong>
-          <a href="./papers/APIFix.pdf"> <img src="images/pdf.png" width="25" height="25"></a> 
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        <strong><u>Xiang Gao</u></strong>, Arjun Radhakrishna, Gustavo Soares, Ridwan Shariffdeen, Sumit Gulwani, Abhik Roychoudhury
-        <p class="">Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA) 2021</p>
-      </li>
-      <li>
-          <h4 class=""><strong>Automated Patch Backporting in Linux (Experience Paper)</strong>
-            <a href="./papers/FixMorph.pdf"> <img src="images/pdf.png" width="25" height="25"></a> 
-            <a href="https://github.com/rshariffdeen/FixMorph"> <img src="images/github.png" width="25" height="25"></a> 
-            <a href="https://www.youtube.com/watch?v=NUNdEJnbTI0"><img src="images/video.png" width="25" height="25"></a>
-            <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-        </h4>
-          Ridwan Shariffdeen*, <strong><u>Xiang Gao</u></strong>*, Gregory J. Duck, Shin Hwei Tan, Julia Lawall, Abhik Roychoudhury (*co-first author)
-          <p class="">International Symposium on Software Testing and Analysis (ISSTA), 2021</p>
-          <p style="color:red">Distinguished Artifact Award</p>
-      </li>
-      <li>
-          <h4 class=""><strong>Beyond Tests: Program Vulnerability Repair via Crash Constraint Extraction</strong>
-            <a href="./papers/ExtractFix.pdf"> <img src="images/pdf.png" width="25" height="25"></a> 
-            <a href="https://extractfix.github.io/"><img src="images/link.png" width="25" height="25"></a>
-            <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-        </h4>
-          <strong><u>Xiang Gao</u></strong>, Bo Wang, Gregory J. Duck, Ruyi Ji, Yingfei Xiong, Abhik Roychoudhury
-          <p class="">Transactions on Software Engineering and Methodology (TOSEM), 2021</p>
-      </li>
-      <li>
-        <h4 class="">
-          <strong>Feedback-Driven Semi-Supervised Synthesis of Program Transformations</strong>
-          <a href="./papers/OOPSLA_2020.pdf"> <img src="images/pdf.png" width="25" height="25">
-          <a href="./slides/OOPSLA_2020.pdf"> <img src="images/slides.png" width="25" height="25"></a> 
-          <a href="https://www.youtube.com/watch?v=CoLcclv-TbA"><img src="images/video.png" width="25" height="25"></a> 
-          <a href="https://www.youtube.com/watch?v=jrLaDB1VZqM"><img src="images/video.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-          <strong><u>Xiang Gao</u></strong>, Shraddha Barke, Arjun Radhakrishna, Gustavo Soares, Sumit Gulwani, Alan Leung, Nachiappan Nagappan, Ashish Tiwari
-          <p class="">Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA) 2020</p>
-      </li>
-      <li>
-        <h4 class=""><strong>Binary Rewriting without Control Flow Recovery</strong>
-          <a href="./papers/PLDI20.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://github.com/GJDuck/e9patch"> <img src="images/github.png" width="25" height="25"></a>
-          <a href="https://www.youtube.com/watch?v=qK2ZCEStoG0"><img src="images/video.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Gregory J. Duck, <strong><u>Xiang Gao</u></strong>, Abhik Roychoudhury
-        <p class="">Programming Language Design and Implementation (PLDI) 2020</p>
-      </li>
-      <li>
-        <h4 class=""><strong>Interactive Patch Generation and Suggestion</strong>
-          <a href="./papers/APR20.pdf"> <img src="images/pdf.png" width="25" height="25"></a>
-        </h4>
-        <strong><u>Xiang Gao</u></strong>, Abhik Roychoudhury
-        <p class="">Automated Program Repair Workshop (APR @ ICSE) 2020</p>
-      </li>
-      <li>
-        <h4 class=""><strong>Fuzz Testing based Data Augmentation to Improve Robustness of Deep Neural Networks</strong>
-          <a href="./papers/Sensei_ICSE20.pdf"><img src="images/pdf.png" width="25" height="25"> </a>
-          <a href="https://www.github.com/gaoxiang9430/sensei"> <img src="images/github.png" width="25" height="25"></a>
-          <a href="https://www.youtube.com/watch?v=2VNL9yQnhp4"> <img src="images/video.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        <strong><u>Xiang Gao</u></strong>, Ripon K. Saha, Mukul R. Prasad, Abhik Roychoudhury
-        <p class="">International Conference on Software Engineering (ICSE) 2020.</p>
-      </li>
-      <li>
-        <h4 class=""><strong>Crash-avoiding Program Repair </strong>
-          <a href="./papers/Fix2Fit.pdf"><img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://www.github.com/gaoxiang9430/fix2fit"> <img src="images/github.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        <strong><u>Xiang Gao</u></strong>, Sergey Mechtaev, Abhik Roychoudhury
-        <p class="">ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA) 2019.</p>
-      </li>
-      <li>
-        <h4 class=""><strong>Android Testing via Synthetic Symbolic Execution </strong>
-          <a href="./papers/SynthesiSE.pdf"><img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        <strong><u>Xiang Gao</u></strong>, Shin Hwei Tan, Zhen Dong, Abhik Roychoudhury
-        <p class="">International Conference on Automated Software Engineering (ASE) 2018.</p>
-      </li> 
-      <li>
-        <h4 class=""><strong>Repairing Crashes in Android Apps&nbsp;</strong>
-          <a href="./papers/droixicse.pdf"><img src="images/pdf.png" width="25" height="25"></a>
-          <a href="https://droix2017.github.io/"><img src="images/link.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Shin Hwei Tan, Zhen Dong, <strong><u>Xiang Gao</u></strong>, and Abhik Roychoudhury
-        <p class="">International Conference on Software Engineering(ICSE), 2018</p>
-      </li>
-      <li>
-        <h4 class=""><strong>Test-equivalence Analysis for Automatic Patch Generation</strong>
-          <a href="./papers/F1X.pdf">&nbsp;<img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Sergey Mechtaev, <strong><u>Xiang Gao</u></strong>, Shin Hwei Tan, Abhik Roychoudhury
-        <p class="">Transactions on Software Engineering and Methodology ( TOSEM ), 2018</p>
-      </li>
-    </ul><hr>
-    <p><h3 class="">Work before PhD</h3></p>
-    <ul>
-      <li>
-        <h4 class=""><strong>Write-back aware shared last-level cache management for hybrid main memory</strong>
-          <a href="./papers/DAC16.pdf">&nbsp;<img src="images/pdf.png" width="25" height="25"></a>
-          <strong style="color:#fc4e2a;float: right;font-size:12pt"></strong>
-
-        </h4>
-        Deshan Zhang, Lei Ju, Mengying Zhao, <strong><u>Xiang Gao</u></strong>, Zhiping Jia<br>53rd Design Automation Conference (DAC), 2016
-      </li>
-    </ul><hr>
   </div>
-  <br><br>
-</body>
 
+  <footer class="site-footer">
+    <p>&copy; 2026 Xiang Gao, School of Computer Science, Beihang University.</p>
+  </footer>
+
+</body>
 </html>
